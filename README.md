@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# F-Union Africa Summit 2026
 
-## Getting Started
+Professional landing page for the **F-Union Africa Summit 2026** — a pan-African platform connecting women leaders, entrepreneurs, and decision-makers to transform visibility into economic opportunities.
 
-First, run the development server:
+---
 
+## 🚀 Getting Started
+
+### 📦 Prerequisites
+-   **Node.js**: v18+ (tested on v20+)
+-   **NPM**: v9+
+
+### 🛠️ Local Development
+To run the project in development mode:
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+> [!IMPORTANT]
+> **Asset Loading**: The project uses a conditional `basePath` in `next.config.ts`. In development (`npm run dev`), assets serve from the root `/`. In production builds, they serve from `/f-union-project/` to support GitHub Pages.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🏗️ Project Architecture
 
-## Learn More
+The project follows a **Feature-based Atomic Architecture** within the `src` directory:
 
-To learn more about Next.js, take a look at the following resources:
+-   📂 `src/app`: **Next.js App Router**. Contains the root `layout.tsx`, global styles (`globals.css`), and the main `page.tsx`.
+-   📂 `src/core`: **Shared Core**. Cross-cutting concerns used throughout the entire app.
+    -   `components/`: Reusable UI elements (`Button`, `Navbar`, `Footer`, `Container`).
+    -   `assets/`: Shared images, logos, and icons.
+-   📂 `src/features`: **Domain-specific Features**.
+    -   `landing/`: All components and screens specifically for the landing page (Hero, Speakers, Partners, etc.).
+    -   `landing/components/`: Modularized sections of the single-page application.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎨 Design System & Conventions
 
-## Deploy on Vercel
+### Brand Colors (Tailwind Tokens)
+We use a premium, high-contrast color palette defined in `tailwind.config.ts`:
+-   `summit-purple`: `#2D0A54` (Primary brand color)
+-   `summit-red`: `#E33E33` (Accent color)
+-   `summit-blue`: `#0070B8` (Informational/Secondary blue)
+-   `summit-dark`: `#1A1A1A` (Backgrounds and dark text)
+-   **Hero Gradient Palette**: `#3a2051`, `#845ec2`, `#b39ddb`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Navigation & Anchor Mapping
+The header links correspond to specific section IDs on the landing page:
+-   **Vision**: `#vision` (Why/Mission section)
+-   **Programme**: `#programme` (Event schedule)
+-   **Intervenant(e)s**: `#speakers` (Speaker gallery)
+-   **Pass**: `#pass` (Pricing/Offers)
+-   **Partenaires**: `#partenaires` (Partner carousels)
+-   **Contact**: `#contact` (Footer)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🏗️ Component Conventions
+1.  **Strict Mutually Exclusive Visibility**: Use wrapper `div`s with Tailwind visibility classes (`hidden lg:block` vs `lg:hidden`) for elements that should toggle between mobile and desktop (e.g., Navbar CTA vs Hamburger).
+2.  **Premium Aesthetics**: Prioritize glassmorphism (via `backdrop-blur`) and vibrant gradients for immersive UI elements like the mobile sidebar.
+3.  **Responsive Layouts**: Always test with `max-` and standard Tailwind breakpoints to ensure consistency across distinct viewports.
+
+---
+
+## 🌍 Deployment
+
+### GitHub Pages
+This project is configured for automated deployment to GitHub Pages via the `gh-pages` branch.
+
+**To build & deploy manually:**
+```bash
+npm run deploy
+```
+This script runs a build and pushes the contents of the `out/` directory to the `gh-pages` branch of the origin repository.
+
+---
+
+## ✍️ Contribution Notes
+-   Avoid inline styles; use Tailwind utilities or predefined `core` components.
+-   Keep sections decoupled within `src/features/landing/components/` for easy maintenance.

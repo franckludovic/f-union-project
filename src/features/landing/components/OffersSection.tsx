@@ -51,7 +51,7 @@ export const OffersSection = () => {
   ];
 
   return (
-    <section id="offres" className="bg-white">
+    <section id="pass" className="bg-white">
       {/* Header Section */}
       <div className="bg-[#da291c] text-white py-20 relative overflow-hidden bg-gradient-to-b from-[#da291c] to-[#a61c12]">
         <div className="absolute inset-0 z-0 opacity-40">

@@ -4,7 +4,7 @@ import dotMap from "@/core/assets/Dot Map.png";
 
 export const Footer = () => {
   return (
-    <footer className="relative bg-[#1a1a1a] text-white py-16 overflow-hidden">
+    <footer id="contact" className="relative bg-[#1a1a1a] text-white py-16 overflow-hidden">
       {/* Background Dot Map Container matching header style */}
       <div className="absolute inset-0 z-0 opacity-40">
         <img src={dotMap.src} alt="" className="w-full h-full object-cover md:object-contain object-center scale-150 md:scale-100 mix-blend-overlay" />

@@ -3,7 +3,7 @@ import { SectionHeading } from "@/core/components/SectionHeading";
 import whyImage from "@/core/assets/whyImage.png"
 export const WhySection = () => {
   return (
-    <section id="pourquoi" className="bg-[#1f5c8c] py-28 text-white relative overflow-hidden">
+    <section id="vision" className="bg-[#1f5c8c] py-28 text-white relative overflow-hidden">
 
 
       <div className="absolute inset-0 z-0 text-center flex items-center justify-center opacity-30 text-xs">
