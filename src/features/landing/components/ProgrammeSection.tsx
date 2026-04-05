@@ -1,4 +1,6 @@
-import { ReactNode } from "react";
+"use client";
+
+import { ReactNode, useState } from "react";
 import { Container } from "@/core/components/Container";
 import dotMap from "@/core/assets/Dot Map.png";
 import day1 from "@/core/assets/day1.jpeg";
@@ -22,6 +24,12 @@ const FlipCard = ({
   backDescription,
   isDetailFront = false,
 }: FlipCardProps) => {
+  const [tapped, setTapped] = useState(false);
+
+  const handleTap = () => {
+    setTapped((prev) => !prev);
+  };
+
   const FrontDetail = () => (
     <div className="absolute inset-0 w-full h-full rounded-[2rem] overflow-hidden shadow-2xl bg-[#1c1c1c] flex flex-col [backface-visibility:hidden]">
       <div className="absolute inset-0 z-0 opacity-40 mix-blend-luminosity">
@@ -102,8 +110,14 @@ const FlipCard = ({
   );
 
   return (
-    <div className="relative h-[480px] lg:h-[550px] w-full group [perspective:2000px] mt-12 md:mt-0">
-      <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div
+      className="relative h-[480px] lg:h-[550px] w-full group [perspective:2000px] mt-12 md:mt-0 cursor-pointer"
+      onClick={handleTap}
+    >
+      <div
+        className={`relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] lg:group-hover:[transform:rotateY(180deg)] ${tapped ? "[transform:rotateY(180deg)] lg:[transform:none]" : ""
+          }`}
+      >
         {isDetailFront ? <FrontDetail /> : <FrontImage />}
         <BackSide />
       </div>
