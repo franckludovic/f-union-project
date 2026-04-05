@@ -146,7 +146,7 @@ export const ProgrammeSection = () => {
               backTitle={
                 <>
                   Le rendez-vous du Soft Power<br />
-                  <span className="ml-[2px] text-white text-[0.20em]">Sur invitation</span>
+                  <span className="ml-[2px] text-white">Sur invitation</span>
                 </>
               }
               backDescription="Dialogue de haut niveau pour des décideurs engagés."

@@ -1,6 +1,9 @@
 import { Container } from "@/core/components/Container";
 import { Button } from "@/core/components/Button";
 import heroImage from "@/core/assets/heroImage.png"
+import doualaLogo from "@/core/assets/doualaLogo.png"
+import dateLogo from "@/core/assets/dateLogo.png"
+import passLogo from "@/core/assets/passLogo.png"
 
 export const HeroSection = () => {
   return (
@@ -13,11 +16,10 @@ export const HeroSection = () => {
         <div className="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-summit-dark via-summit-dark/90 to-transparent z-10"></div>
       </div>
 
-      <Container className="relative z-20 flex-1 flex flex-col justify-center w-full mt-2">
+      <Container className="relative z-20 flex-1 flex flex-col justify-center w-full mt-5">
         <div className="text-white max-w-4xl">
           <h2 className="text-[#845ec2] font-black uppercase text-xl md:text-2xl mb-4 leading-tight">
-            # Next<br />
-            Africa 2035
+            # Next Africa 2035
           </h2>
 
           <h1 className="text-5xl md:text-[5.5rem] font-black mb-8 leading-[1.05] tracking-tight">
@@ -25,27 +27,26 @@ export const HeroSection = () => {
             SUMMIT 2026
           </h1>
 
-          <p className="text-xl md:text-2xl text-[#b39ddb] font-medium mb-10 max-w-lg leading-snug">
+          <p className="text-xl md:text-2xl text-[#b39ddb] font-medium mb-4 max-w-lg leading-snug">
             La visibilité comme levier de transformation économique.
           </p>
 
-          <div className="flex gap-4 mb-10">
-            <Button variant="purple" className="px-8 py-3 rounded-full font-bold text-sm bg-summit-dark border border-white/10 hover:bg-white/10">
-              Reserver ma place
-            </Button>
-          </div>
+          <p className="text-lg md:text-xl text-white/90 font-medium mb-10 max-w-lg leading-snug">
+            Construire l&apos;Afrique de 2035 en amplifiant le leadership{" "}
+            <span className="text-[#b39ddb] font-bold">féminin.</span>
+          </p>
+
         </div>
       </Container>
 
 
       <Container className="relative z-20 mt-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-white">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-white items-center">
 
           {/* Location */}
           <div className="flex items-center gap-4">
-            <div className="w-10 h-10 flex items-center justify-center shrink-0">
-
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <div className="w-8 h-8 flex items-center justify-center shrink-0">
+              <img src={doualaLogo.src} alt="doualaLogo" className="w-6 h-full" />
             </div>
             <div className="font-bold text-lg leading-tight">
               Douala /<br />
@@ -55,9 +56,8 @@ export const HeroSection = () => {
 
           {/* Date */}
           <div className="flex items-center gap-4">
-            <div className="w-10 h-10 flex items-center justify-center shrink-0">
-              {/* SVG Icon Outline Sign/Date */}
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            <div className="w-8 h-8 flex items-center justify-center shrink-0">
+              <img src={dateLogo.src} alt="dateLogo" className="w-full h-full object-cover" />
             </div>
             <div className="font-bold text-lg leading-tight">
               28 – 30<br />
@@ -67,14 +67,22 @@ export const HeroSection = () => {
 
           {/* Price Info */}
           <div className="flex items-center gap-4">
-            {/* Note: the design has a ticket icon here but it appears slightly cut off at the bottom, I'll use a standard ticket icon */}
-            <div className="w-10 h-10 flex items-center justify-center shrink-0">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M4 7V4h16v3c-1.1 0-2 .9-2 2s.9 2 2 2v3H4v-3c1.1 0 2-.9 2-2s-.9-2-2-2V7z"></path><line x1="9" y1="7" x2="9" y2="17"></line><line x1="15" y1="7" x2="15" y2="17"></line></svg>
+            <div className="w-8 h-8 flex items-center justify-center shrink-0">
+              <img src={passLogo.src} alt="passLogo" className="w-full h-full object-cover" />
             </div>
             <div className="font-bold text-lg leading-tight">
               Pass à partir de<br />
               5 000 FCFA
             </div>
+          </div>
+
+          <div className="flex items-center justify-start md:justify-end">
+            <button
+              style={{ backgroundColor: "#ffffff", color: "#1a1033" }}
+              className="px-6 py-3 rounded-full font-bold text-sm shadow-lg hover:bg-gray-100 transition-all active:scale-95 inline-flex items-center justify-center"
+            >
+              Réserver ma place
+            </button>
           </div>
 
         </div>
