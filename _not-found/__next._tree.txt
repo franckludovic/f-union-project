@@ -1,3 +1,4 @@
-:HL["/f-union-project/_next/static/chunks/4a5d1f45c92c47b0.css","style"]
+:HL["/f-union-project/_next/static/chunks/5caf8f7c1fee3263.css","style"]
 :HL["/f-union-project/_next/static/media/Dot Map.e535a335.png","image"]
-0:{"buildId":"QhF3SpVGrDpMc8rsvNuWO","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"/_not-found","paramType":null,"paramKey":"/_not-found","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+:HL["/f-union-project/_next/static/media/Funion_logo.c55b1301.png","image"]
+0:{"buildId":"Y7tkJY-ppFnN81bR1nAGG","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"/_not-found","paramType":null,"paramKey":"/_not-found","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
