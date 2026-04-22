@@ -1,4 +1,5 @@
 "use client"
+import { useState, useEffect } from "react";
 import { Container } from "@/core/components/Container";
 import { Button } from "@/core/components/Button";
 import heroImage from "@/core/assets/heroImage.png"
@@ -6,7 +7,47 @@ import doualaLogo from "@/core/assets/doualaLogo.png"
 import dateLogo from "@/core/assets/dateLogo.png"
 import passLogo from "@/core/assets/passLogo.png"
 
+
+
 export const HeroSection = () => {
+
+  const [countdown, setCountdown] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+
+  useEffect(() => {
+    const targetDate = new Date(2026, 4, 28, 0, 0, 0);
+
+    const updateCountdown = () => {
+      const now = Date.now();
+      const diff = targetDate.getTime() - now;
+
+      if (diff <= 0) {
+        setCountdown({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      setCountdown({ days, hours, minutes, seconds });
+    };
+
+    updateCountdown();
+    const interval = window.setInterval(updateCountdown, 1000);
+    return () => window.clearInterval(interval);
+  }, []);
+
+  const pad = (value: number) => String(value).padStart(2, "0");
+
+
   return (
     <section className="relative min-h-[70vh] flex flex-col pb-16 bg-summit-dark overflow-hidden">
 
@@ -38,6 +79,62 @@ export const HeroSection = () => {
             Construire l&apos;Afrique de 2035 en amplifiant le leadership{" "}
             <span className="text-[#b39ddb] font-bold">féminin.</span>
           </p>
+
+          <div className="flex items-center justify-start gap-4 md:gap-8 lg:gap-12">
+            {/* Days */}
+            <div className="flex items-center flex-col gap-1">
+              <div className="flex items-center justify-center shrink-0">
+                <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold">
+                  {String(countdown.days).padStart(2, "0")}
+                </h3>
+              </div>
+              <div className="font-bold text-sm md:text-base lg:text-lg leading-tight">
+                jours
+              </div>
+            </div>
+
+            <div className="text-3xl md:text-4xl lg:text-5xl font-light">:</div>
+
+            {/* Hours */}
+            <div className="flex items-center flex-col gap-1">
+              <div className="flex items-center justify-center shrink-0">
+                <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold">
+                  {pad(countdown.hours)}
+                </h3>
+              </div>
+              <div className="font-bold text-sm md:text-base lg:text-lg leading-tight">
+                Heures
+              </div>
+            </div>
+
+            <div className="text-3xl md:text-4xl lg:text-5xl font-light">:</div>
+
+            {/* Minutes */}
+            <div className="flex items-center flex-col gap-1">
+              <div className="flex items-center justify-center shrink-0">
+                <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold">
+                  {pad(countdown.minutes)}
+                </h3>
+              </div>
+              <div className="font-bold text-sm md:text-base lg:text-lg leading-tight">
+                Minutes
+              </div>
+            </div>
+
+            <div className="text-3xl md:text-4xl lg:text-5xl font-light">:</div>
+
+            {/* Seconds */}
+            <div className="flex items-center flex-col gap-1">
+              <div className="flex items-center justify-center shrink-0">
+                <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold">
+                  {pad(countdown.seconds)}
+                </h3>
+              </div>
+              <div className="font-bold text-sm md:text-base lg:text-lg leading-tight">
+                Secondes
+              </div>
+            </div>
+          </div>
 
         </div>
       </Container>

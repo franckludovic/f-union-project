@@ -53,7 +53,7 @@ export const Footer = () => {
                 <svg className="w-5 h-5 text-white shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                 </svg>
-                <span>(+237) 699 94 48 79 / 678 42 21 37</span>
+                <span>(+237) 682 88 23 28</span>
               </li>
               <li className="flex items-center gap-4">
                 <svg className="w-5 h-5 text-white shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -79,13 +79,6 @@ export const Footer = () => {
               </h4>
               <div className="w-8 h-0.5 bg-[#a855f7]/60 rounded-full"></div>
             </div>
-
-            <p className="text-gray-400 text-[13px] leading-relaxed max-w-[280px]">
-              Duis aute irure dolor in
-              reprehenderit in voluptate velit
-              esse cillum dolore eu fugiat
-              nulla pariatur.
-            </p>
 
             <div className="flex items-center gap-4 mt-2">
               {/* LinkedIn */}

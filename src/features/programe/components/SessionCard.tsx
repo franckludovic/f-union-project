@@ -17,7 +17,7 @@ interface SpeakerInfoProps {
 }
 
 const SpeakerItem = ({ speaker }: SpeakerInfoProps) => (
-  <div className="flex flex-col items-center text-center gap-3 min-w-[100px]">
+  <div className="flex flex-col items-center text-center gap-3 min-w-[72px]">
     <div
       style={{
         width: '72px',
@@ -63,7 +63,7 @@ export const SessionCard = ({ session }: SessionCardProps) => {
         {/* LEFT: Session Info (Title + Details) */}
         <div className="w-full md:max-w-[55%] flex flex-col">
           <h3 className="text-3xl sm:text-4xl md:text-[2.5rem] font-black mb-10 leading-[1.1] md:leading-[1.05] tracking-tight" style={{
-            color: '#3B0B0B',
+            color: '#B0571F',
             letterSpacing: '-0.03em',
             margin: '0 0 40px 0',
             fontFamily: 'inherit'
@@ -88,7 +88,7 @@ export const SessionCard = ({ session }: SessionCardProps) => {
 
         {/* RIGHT: Speakers Section - Grid Layout */}
         <div className="w-full md:w-auto flex flex-col pt-10 md:pt-0">
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10 items-start">
+          <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-x-0 gap-y-10 items-start">
             {session.speakers.map((speaker) => (
               <SpeakerItem key={speaker.id} speaker={speaker} />
             ))}

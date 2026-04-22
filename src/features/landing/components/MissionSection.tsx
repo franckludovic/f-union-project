@@ -12,36 +12,24 @@ export const MissionSection = () => {
         <div className="mb-1">
           <h2 className="text-[2.75rem] md:text-[3.5rem] font-bold leading-tight mb-12 tracking-tight">
             <span className="text-[#151f2e] border-b-[5px] border-[#2998e3] pb-1 mr-3 inline-block">
-              Notre
+              Pourrquoi
             </span>
-            <span className="text-[#2998e3]">Mission</span>
+            <span className="text-[#2998e3]">participer ?</span>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-start">
             {/* Left Content */}
             <div className="text-gray-600 space-y-6 text-sm md:text-base font-medium leading-relaxed max-w-lg pt-4">
+              <h2 className="text-2xl font-bold text-[#151f2e] mb-10">
+                Monter en compétences concrètement
+              </h2>
               <p>
-                F-UNION Africa Summit est né d'une
-                ambition forte : transformer ce défi en
-                opportunité. Nous ne créons pas
-                seulement un événement.
+                Workshops business & carrière, coaching personnalisé (The Clinic), mentoring 1:1 :
+                repartez avec des outils immédiatement actionnables.
               </p>
               <p>
-                nous bâtissons un écosystème où
-                l’autorité institutionnelle rencontre la
-                sororité créative.
-                Notre mission est d'identifier, de former
-                et de connecter ces femmes leaders
-                pour les projeter là où se dessine l'avenir
-                du continent.
-                À Douala, en mai 2026, nous
-                unirons nos forces pour prouver que la
-                visibilité des femmes est le levier straté-
-                gique majeur de la
-                transformation africaine.
-                Ensemble, nous ne changeons pas seule-
-                ment des carrières, nous transformons le
-                destin de l’Afrique.
+                La vision Next Africa 2035 ne se fera pas sans vous.
+                En participant, vous devenez actrice du changement et du leadership féminin sur le continent.
               </p>
             </div>
 
@@ -119,24 +107,24 @@ export const MissionSection = () => {
 
       {/* Full Width Blocks */}
       <Container className="max-w-6xl mx-auto px-4 mb-15">
-        <div className="w-full flex-col md:flex-row flex mx-auto shadow-2xl rounded-sm overflow-hidden">
+        <div className="w-full grid grid-cols-2 gap-2 md:gap-4 md:grid-cols-4 mx-auto shadow-2xl rounded-sm overflow-hidden">
           {/* Block 1 */}
-          <div className="flex-[1.2] bg-gradient-to-r from-[#2998e3] to-[#147ec1] flex items-center justify-center cursor-pointer hover:opacity-95 transition-opacity py-16 md:py-24">
+          <div className="col-span-1 md:col-span-1 flex-[1.2] m-10 sm:m-10 bg-gradient-to-r from-[#2998e3] to-[#147ec1] flex items-center justify-center cursor-pointer hover:opacity-95 transition-opacity py-16 md:py-24 rounded-lg border border-transparent sm:border-gray-300">
             <span className="text-white font-bold text-xl md:text-2xl tracking-wide">Identifier</span>
           </div>
 
           {/* Block 2 */}
-          <div className="flex-1 bg-[#0f172a] flex items-center justify-center cursor-pointer hover:bg-[#1e293b] transition-colors py-16 md:py-24">
+          <div className="col-span-1 md:col-span-1 m-6 sm:m-10 flex-1 bg-[#0f172a] flex items-center justify-center cursor-pointer hover:bg-[#1e293b] transition-colors py-16 md:py-24 rounded-lg border border-transparent sm:border-gray-300">
             <span className="text-white font-bold text-xl md:text-2xl tracking-wide">Former</span>
           </div>
 
           {/* Block 3 */}
-          <div className="flex-1 bg-[#2998e3] flex items-center justify-center cursor-pointer hover:bg-[#3ba2e8] transition-colors py-16 md:py-24">
+          <div className="col-span-1 md:col-span-1 m-6 sm:m-10 flex-1 bg-[#2998e3] flex items-center justify-center cursor-pointer hover:bg-[#3ba2e8] transition-colors py-16 md:py-24 rounded-lg border border-transparent sm:border-gray-300">
             <span className="text-white font-bold text-xl md:text-2xl tracking-wide">Connecter</span>
           </div>
 
           {/* Block 4 */}
-          <div className="flex-1 bg-[#010617] flex items-center justify-center cursor-pointer hover:bg-[#061122] transition-colors py-16 md:py-24">
+          <div className="col-span-1 md:col-span-1 m-6 sm:m-10 flex-1 bg-[#010617] flex items-center justify-center cursor-pointer hover:bg-[#061122] transition-colors py-16 md:py-24 rounded-lg border border-transparent sm:border-gray-300">
             <span className="text-white font-bold text-xl md:text-2xl tracking-wide">Projeter</span>
           </div>
         </div>

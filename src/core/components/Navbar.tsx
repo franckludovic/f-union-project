@@ -89,7 +89,7 @@ export const Navbar = () => {
                 onClick={toggleMobileMenu}
                 aria-label="Toggle menu"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#845ec2" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <line x1="3" y1="12" x2="21" y2="12"></line>
                   <line x1="3" y1="6" x2="21" y2="6"></line>
                   <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -130,10 +130,10 @@ export const Navbar = () => {
             <div className="flex flex-col py-10 px-8 gap-1 flex-grow overflow-y-auto">
               {[
                 { href: "#vision", label: "Vision" },
-                { 
-                  href: "#programme", 
+                {
+                  href: "#programme",
                   label: "Programme",
-                  subLinks: programmeLinks 
+                  subLinks: programmeLinks
                 },
                 { href: "#speakers", label: "Intervenant(e)s" },
                 { href: "#partenaires", label: "Partenaires" },
@@ -154,7 +154,7 @@ export const Navbar = () => {
                       <polyline points="12 5 19 12 12 19"></polyline>
                     </svg>
                   </Link>
-                  
+
                   {'subLinks' in link && link.subLinks && (
                     <div className="flex flex-col gap-1 pb-4 pl-6">
                       {link.subLinks.map((sub) => (

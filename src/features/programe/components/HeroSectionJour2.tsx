@@ -53,13 +53,13 @@ export const HeroSectionJour2 = () => {
           alt="heroImage"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/80 z-10"></div>
+        <div className="absolute inset-0 bg-black/50 z-10"></div>
       </div>
 
       <Container className="relative z-20 flex-1 flex flex-col justify-center w-full pt-32 pb-0">
         <div className="text-white max-w-4xl">
           <h2
-            style={{ color: "#8B0B0B" }}
+            style={{ color: "#B150C5" }}
             className="font-black uppercase text-xl md:text-2xl mb-4 leading-tight"
           >
             #NextAfrica2035
@@ -80,7 +80,7 @@ export const HeroSectionJour2 = () => {
 
           <p className="text-lg md:text-xl text-white/90 font-medium mb-10 mt-10 max-w-lg leading-snug">
             Construire l&apos;Afrique de 2035 en amplifiant le leadership{" "}
-            <span style={{ color: "#8B0B0B" }} className="font-bold">
+            <span style={{ color: "#B150C5" }} className="font-bold">
               féminin.
             </span>
           </p>
@@ -155,7 +155,7 @@ export const HeroSectionJour2 = () => {
                   "_blank"
                 )
               }
-              style={{ backgroundColor: "#ffffff", color: "#8B0B0B" }}
+              style={{ backgroundColor: "#ffffff", color: "#B150C5" }}
               className="px-8 py-3 md:px-10 md:py-4 rounded-full font-bold text-sm md:text-base shadow-md hover:bg-gray-100 transition-all hover:scale-105 active:scale-95 inline-flex items-center justify-center whitespace-nowrap w-full md:w-auto"
             >
               Réserver ma place
@@ -166,7 +166,7 @@ export const HeroSectionJour2 = () => {
 
       {/* Navigation Arrows (Left/Right) - Absolutely positioned */}
       <button
-        style={{ backgroundColor: isLeftHovered ? "#8B0B0B" : "transparent" }}
+        style={{ backgroundColor: isLeftHovered ? "#B150C5" : "transparent" }}
         onMouseEnter={() => setIsLeftHovered(true)}
         onMouseLeave={() => setIsLeftHovered(false)}
         onClick={() => router.push("/programme/jour1")}
@@ -187,7 +187,7 @@ export const HeroSectionJour2 = () => {
       </button>
 
       <button
-        style={{ backgroundColor: isRightHovered ? "#8B0B0B" : "transparent" }}
+        style={{ backgroundColor: isRightHovered ? "#B150C5" : "transparent" }}
         onMouseEnter={() => setIsRightHovered(true)}
         onMouseLeave={() => setIsRightHovered(false)}
         onClick={() => router.push("/programme/jour3")}
