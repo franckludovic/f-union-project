@@ -1,17 +1,7 @@
 import type { NextConfig } from "next";
 
-const isProd = process.env.NODE_ENV === "production";
-const repoName = "/f-union-project";
-
 const nextConfig: NextConfig = {
-  // This is the critical line
-  output: "export",
-
-  // GitHub Pages requires these so assets load correctly in production
-  basePath: isProd ? repoName : "",
-  assetPrefix: isProd ? `${repoName}/` : "",
-
-  // Disable Next.js image optimization (not supported on GitHub Pages)
+  // Disable Next.js image optimization (we can keep this enabled or disabled, but unoptimized: true is safer if you don't want to configure Vercel image limits)
   images: {
     unoptimized: true,
     remotePatterns: [
