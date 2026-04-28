@@ -14,27 +14,31 @@ export const DownloadButton = ({ fileUrl, fileName }: DownloadButtonProps) => {
   const handleDownload = async () => {
     setIsDownloading(true);
     try {
-      const response = await fetch(fileUrl);
-      if (!response.ok) throw new Error('Download failed');
-
-      const blob = await response.blob();
-      const url = window.URL.createObjectURL(blob);
-
+      // If the URL is already an internal API route (like /api/notion-pdf), use it directly.
+      // Otherwise, use our proxy to bypass CORS for external URLs.
+      let apiUrl = fileUrl;
+      if (fileUrl.startsWith('/api/')) {
+        apiUrl = `${fileUrl}${fileUrl.includes('?') ? '&' : '?'}download=true&filename=${encodeURIComponent(fileName || 'Communique-F-Union.pdf')}`;
+      } else {
+        apiUrl = `/api/download?url=${encodeURIComponent(fileUrl)}&filename=${encodeURIComponent(fileName || 'Communique-F-Union.pdf')}`;
+      }
+      
       const a = document.createElement('a');
-      a.href = url;
+      a.href = apiUrl;
+      // The API route sends 'Content-Disposition: attachment' which forces the download
       a.download = fileName || 'Communique-F-Union.pdf';
       document.body.appendChild(a);
       a.click();
 
       // Cleanup
-      window.URL.revokeObjectURL(url);
       document.body.removeChild(a);
     } catch (error) {
       console.error('Error during download:', error);
-      // Fallback: open in new tab if blob download fails (e.g. CORS)
+      // Fallback: open in new tab if anything goes wrong
       window.open(fileUrl, '_blank');
     } finally {
-      setIsDownloading(false);
+      // Short delay to keep the loading state visible while the browser starts the download
+      setTimeout(() => setIsDownloading(false), 1500);
     }
   };
 
