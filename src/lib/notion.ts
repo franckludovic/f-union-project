@@ -43,8 +43,12 @@ export async function getCommuniqueContent(): Promise<CommuniqueContent> {
         if (textArr && textArr.length > 0) {
           paragraphs.push(textArr.map((t: any) => t.plain_text).join(''));
         }
-      } else if (block.type === 'file' || block.type === 'pdf') {
-        hasPdf = true;
+      } else if (block.type === 'file') {
+        const url = block.file.type === 'file' ? block.file.file.url : block.file.external.url;
+        if (url) hasPdf = true;
+      } else if (block.type === 'pdf') {
+        const url = block.pdf.type === 'file' ? block.pdf.file.url : block.pdf.external.url;
+        if (url) hasPdf = true;
       }
     }
 
@@ -79,13 +83,11 @@ export async function getNotionPdfUrl(): Promise<{ url: string; name: string } |
       if (block.type === 'file') {
         const url = block.file.type === 'file' ? block.file.file.url : block.file.external.url;
         const name = block.file.name || 'document.pdf';
-        return { url, name };
+        if (url) return { url, name };
       } else if (block.type === 'pdf') {
         const url = block.pdf.type === 'file' ? block.pdf.file.url : block.pdf.external.url;
-        // The PDF block doesn't always have a name field in the same way as file block
-        // so we can try to extract from caption or use a default
         const name = 'communique.pdf';
-        return { url, name };
+        if (url) return { url, name };
       }
     }
     return null;

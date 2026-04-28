@@ -58,16 +58,16 @@ export const HeroSection = () => {
         <div className="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-summit-dark via-summit-dark/90 to-transparent z-10"></div>
       </div>
 
-      <Container className="relative z-20 flex-1 flex flex-col justify-center w-full pt-32 pb-12">
+      <Container className="relative z-20 flex-1 flex flex-col justify-center w-full pt-24 md:pt-32 pb-12">
         <div className="text-white max-w-4xl">
           <h2 className="text-[#845ec2] font-black uppercase text-xl md:text-2xl mb-4 leading-tight">
             #NextAfrica2035
           </h2>
 
-          <h1 className="text-5xl md:text-[5.5rem] font-black  leading-[1.05] tracking-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-[5.5rem] font-black leading-[1.1] md:leading-[1.05] tracking-tight">
             F-UNION AFRICA<br />
           </h1>
-          <h1 className="text-4xl md:text-[4.5rem] font-black mb-8 leading-[1.05] tracking-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-[4.5rem] font-black mb-8 leading-[1.1] md:leading-[1.05] tracking-tight">
             SUMMIT 2026
           </h1>
 
@@ -141,7 +141,7 @@ export const HeroSection = () => {
 
 
       <Container className="relative z-20 mt-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-white items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-white items-center">
 
           {/* Location */}
           <div className="flex items-center gap-4">
@@ -180,7 +180,7 @@ export const HeroSection = () => {
             <button
               onClick={() => window.open("https://f-union.genuka.shop/en/collections", "_blank")}
               style={{ backgroundColor: "#ffffff", color: "#21004E" }}
-              className="px-6 py-3 rounded-full font-bold text-xs shadow-md hover:bg-gray-100 transition-all active:scale-95 inline-flex items-center justify-center"
+              className="w-full sm:w-auto px-6 py-3 rounded-full font-bold text-xs shadow-md hover:bg-gray-100 transition-all active:scale-95 inline-flex items-center justify-center"
             >
               Réserver ma place
             </button>

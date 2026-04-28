@@ -12,7 +12,7 @@ export const MissionSection = () => {
         <div className="mb-1">
           <h2 className="text-[2.75rem] md:text-[3.5rem] font-bold leading-tight mb-12 tracking-tight">
             <span className="text-[#151f2e] border-b-[5px] border-[#2998e3] pb-1 mr-3 inline-block">
-              Pourrquoi
+              Pourquoi
             </span>
             <span className="text-[#2998e3]">participer ?</span>
           </h2>

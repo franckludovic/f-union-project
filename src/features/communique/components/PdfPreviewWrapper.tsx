@@ -8,7 +8,7 @@ const PdfThumbnail = dynamic(
   { 
     ssr: false,
     loading: () => (
-      <div className="h-[80vh] w-[60vh] animate-pulse bg-white/10 flex items-center justify-center text-white/50 rounded-lg border border-white/5">
+      <div className="min-h-[400px] h-[60vh] lg:h-[85vh] w-full max-w-[60vh] lg:max-w-[65vh] animate-pulse bg-white/10 flex items-center justify-center text-white/50 rounded-lg border border-white/5 p-4 text-center">
         Chargement de l'aperçu PDF...
       </div>
     )

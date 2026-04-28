@@ -167,7 +167,7 @@ export const ProgrammeSection = () => {
               frontTitle="Le rendez-vous du Soft Power"
               dayNumber="Jour 1"
               innerSpace="8"
-              href="/programme/jour1"
+              href=""
               backTitle={
                 <>
                   Le rendez-vous du Soft Power<br />

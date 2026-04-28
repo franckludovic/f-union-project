@@ -6,12 +6,15 @@ export async function GET(request: Request) {
   const isDownload = searchParams.get('download') === 'true';
 
   try {
-    // 1. Fetch the absolute latest S3 URL from Notion (valid for 1 hour)
     const freshPdfData = await getNotionPdfUrl();
+    console.log('Fetched PDF Data:', freshPdfData);
 
-    if (!freshPdfData) {
-      return new NextResponse('No PDF found in Notion page', { status: 404 });
+    if (!freshPdfData || !freshPdfData.url || freshPdfData.url.trim() === '') {
+      console.warn('PDF Data from Notion is missing or has empty URL:', freshPdfData);
+      return new NextResponse('No valid PDF URL found in Notion page', { status: 404 });
     }
+
+    console.log('Proxying PDF URL:', freshPdfData.url);
 
     // 2. Fetch the file but DON'T wait for it to download entirely into memory!
     const response = await fetch(freshPdfData.url);

@@ -6,7 +6,10 @@ export const Jour2Screen = () => {
   return (
     <>
       <HeroSectionJour2 />
-      <ProgrammeView sessions={JOUR_2_SESSIONS} />
+      <ProgrammeView
+        sessions={JOUR_2_SESSIONS}
+        googleFormUrl=""
+      />
     </>
   );
 };

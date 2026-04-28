@@ -16,14 +16,14 @@ export default async function CommuniquePressePage() {
       <HeroSection />
 
       {/* Main Communique Section */}
-      <section className="relative min-h-[90vh] py-20 flex items-center">
+      <section className="relative min-h-[90vh] py-12 md:py-20 flex items-center">
         <Container>
-          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 items-center">
+          <div className="flex flex-col lg:grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
             
             {/* Right side (Mobile Top): Text and Download Button */}
             <div className="text-white space-y-8 order-1 lg:order-2">
               <div className="space-y-4">
-                <h2 className="text-4xl md:text-5xl font-black leading-tight text-white whitespace-pre-line">
+                <h2 className="text-3xl md:text-5xl font-black leading-tight text-white whitespace-pre-line break-words">
                   {content.header}
                 </h2>
                 <div className="w-20 h-1.5 bg-summit-red rounded-full"></div>

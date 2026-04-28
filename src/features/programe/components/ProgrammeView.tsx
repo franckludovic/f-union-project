@@ -5,12 +5,14 @@ import { Container } from "@/core/components/Container";
 import { Session } from "../types";
 import { ProgrammeTabs } from "./ProgrammeTabs";
 import { SessionCard } from "./SessionCard";
+import { GoogleFormSection } from "./GoogleFormSection";
 
 interface ProgrammeViewProps {
   sessions: Session[];
+  googleFormUrl?: string;
 }
 
-export const ProgrammeView = ({ sessions }: ProgrammeViewProps) => {
+export const ProgrammeView = ({ sessions, googleFormUrl }: ProgrammeViewProps) => {
   const [activeHall, setActiveHall] = useState("Toutes les salles");
 
   const halls = useMemo(() => {
@@ -24,7 +26,7 @@ export const ProgrammeView = ({ sessions }: ProgrammeViewProps) => {
   }, [sessions, activeHall]);
 
   return (
-    <div className="bg-white py-10 md:py-20 pb-20 md:pb-40">
+    <div className="bg-white py-10 md:py-20 pb-0">
       <Container>
         <div className="flex flex-col">
           {/* Room Selector Tabs */}
@@ -35,7 +37,7 @@ export const ProgrammeView = ({ sessions }: ProgrammeViewProps) => {
           />
 
           {/* Sessions List */}
-          <div className="flex flex-col">
+          <div className="flex flex-col mb-20">
             {filteredSessions.length > 0 ? (
               filteredSessions.map((session) => (
                 <SessionCard key={session.id} session={session} />
@@ -48,6 +50,8 @@ export const ProgrammeView = ({ sessions }: ProgrammeViewProps) => {
           </div>
         </div>
       </Container>
+      
+      {googleFormUrl && <GoogleFormSection formUrl={googleFormUrl} />}
     </div>
   );
 };
