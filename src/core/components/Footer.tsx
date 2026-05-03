@@ -1,7 +1,7 @@
 import { Container } from './Container';
 import Link from 'next/link';
 import dotMap from "@/core/assets/Dot Map.png";
-import Funion_logo from '@/core/assets/Funion_logo.png'
+import Funion_logo from '@/core/assets/LOGO_SVG.svg'
 
 export const Footer = () => {
   return (

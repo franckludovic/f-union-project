@@ -1,13 +1,16 @@
 "use client"
 import { Container } from "@/core/components/Container";
 import { Button } from "@/core/components/Button";
-import notremissionimage1 from "@/core/assets/notremissionimage1.png";
-import notremissionimage2 from "@/core/assets/notremissionimage2.png";
+import { WhyParticipateCard } from "./WhyParticipateCard";
+import offer1 from "@/core/assets/offer1.jpeg";
+import day2 from "@/core/assets/day2.jpeg";
+import offer3 from "@/core/assets/offer3.jpeg";
+import day1 from "@/core/assets/day1.jpeg";
 
 export const MissionSection = () => {
   return (
     <section id="mission" className="py-15 bg-white">
-      <Container className="max-w-6xl mx-auto px-4">
+      <Container className="max-w-[85rem] mx-auto px-2 md:px-4">
         {/* Top Header and Grid */}
         <div className="mb-1">
           <h2 className="text-[2.75rem] md:text-[3.5rem] font-bold leading-tight mb-12 tracking-tight">
@@ -17,39 +20,54 @@ export const MissionSection = () => {
             <span className="text-[#2998e3]">participer ?</span>
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-start">
-            {/* Left Content */}
-            <div className="text-gray-600 space-y-6 text-sm md:text-base font-medium leading-relaxed max-w-lg pt-4">
-              <h2 className="text-2xl font-bold text-[#151f2e] mb-10">
-                Monter en compétences concrètement
-              </h2>
-              <p>
-                Workshops business & carrière, coaching personnalisé (The Clinic), mentoring 1:1 :
-                repartez avec des outils immédiatement actionnables.
-              </p>
-              <p>
-                La vision Next Africa 2035 ne se fera pas sans vous.
-                En participant, vous devenez actrice du changement et du leadership féminin sur le continent.
-              </p>
-            </div>
-
-            {/* Right Content - Overlapping Images */}
-            <div className="relative h-[180px] md:h-[380px] w-full mt-10 md:mt-0 sm: h-[280px]">
-              <div className="absolute top-0 left-0 w-3/5 md:w-[60%] lg:w-[55%] aspect-video z-10 overflow-hidden transition-transform hover:scale-[1.02]">
-                <img
-                  src={notremissionimage1.src}
-                  alt="Mission interaction"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute top-[25%] md:top-[20%] right-0 md:right-[5%] lg:right-[10%] w-[55%] md:w-[50%] aspect-[4/3] z-20 overflow-hidden border-[16px] border-white transition-transform hover:scale-[1.02]">
-                <img
-                  src={notremissionimage2.src}
-                  alt="Mission event"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 xl:gap-6 items-stretch mt-12">
+            <WhyParticipateCard
+              imageSrc={offer1.src}
+              title="Accéder à un réseau stratégique"
+              description="Rencontrez plus de 600 femmes leaders, entrepreneures et décideuses institutionnelles. Créez des connexions directes avec celles qui font avancer l’Afrique."
+              icon={
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              }
+            />
+            <WhyParticipateCard
+              imageSrc={day2.src}
+              title="Monter en compétences concrètement"
+              description="Workshops business & carrière, coaching personnalisé (The Clinic), mentoring 1:1 : repartez avec des outils immédiatement actionnables."
+              icon={
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                  <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                </svg>
+              }
+            />
+            <WhyParticipateCard
+              imageSrc={offer3.src}
+              title="Gagner en visibilité là où tout se joue"
+              description="Studio Pro 360, Power Hub, Investment Showroom : des espaces conçus pour vous montrer, pitcher et exister dans les sphères d’influence."
+              icon={
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                  <circle cx="12" cy="13" r="4"></circle>
+                </svg>
+              }
+            />
+            <WhyParticipateCard
+              imageSrc={day1.src}
+              title="Contribuer à la transformation de l’Afrique"
+              description="La vision Next Africa 2035 ne se fera pas sans vous. En participant, vous devenez actrice du changement et du leadership féminin sur le continent."
+              icon={
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+              }
+            />
           </div>
         </div>
 
