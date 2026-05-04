@@ -14,24 +14,48 @@ export const DownloadButton = ({ fileUrl, fileName }: DownloadButtonProps) => {
   const handleDownload = async () => {
     setIsDownloading(true);
     try {
-      // If the URL is already an internal API route (like /api/notion-pdf), use it directly.
-      // Otherwise, use our proxy to bypass CORS for external URLs.
-      let apiUrl = fileUrl;
-      if (fileUrl.startsWith('/api/')) {
-        apiUrl = `${fileUrl}${fileUrl.includes('?') ? '&' : '?'}download=true&filename=${encodeURIComponent(fileName || 'Communique-F-Union.pdf')}`;
+      if (fileUrl.startsWith('/api/notion-pdf')) {
+        // Fetch the list of available PDFs
+        const res = await fetch(`${fileUrl}?list=true`);
+        const pdfs = await res.json();
+        
+        if (pdfs && pdfs.length > 0) {
+          for (let i = 0; i < pdfs.length; i++) {
+             const pdf = pdfs[i];
+             const pdfName = pdf.name || fileName || `document-${i+1}.pdf`;
+             const apiUrl = `${fileUrl}?index=${i}&download=true&filename=${encodeURIComponent(pdfName)}`;
+             
+             const a = document.createElement('a');
+             a.href = apiUrl;
+             a.download = pdfName;
+             document.body.appendChild(a);
+             a.click();
+             document.body.removeChild(a);
+             
+             // Small delay to prevent browser blocking multiple downloads
+             if (i < pdfs.length - 1) {
+               await new Promise(r => setTimeout(r, 600));
+             }
+          }
+        } else {
+          throw new Error("No PDFs found");
+        }
       } else {
-        apiUrl = `/api/download?url=${encodeURIComponent(fileUrl)}&filename=${encodeURIComponent(fileName || 'Communique-F-Union.pdf')}`;
+        // Fallback for other files
+        let apiUrl = fileUrl;
+        if (fileUrl.startsWith('/api/')) {
+          apiUrl = `${fileUrl}${fileUrl.includes('?') ? '&' : '?'}download=true&filename=${encodeURIComponent(fileName || 'Communique-F-Union.pdf')}`;
+        } else {
+          apiUrl = `/api/download?url=${encodeURIComponent(fileUrl)}&filename=${encodeURIComponent(fileName || 'Communique-F-Union.pdf')}`;
+        }
+        
+        const a = document.createElement('a');
+        a.href = apiUrl;
+        a.download = fileName || 'Communique-F-Union.pdf';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
       }
-      
-      const a = document.createElement('a');
-      a.href = apiUrl;
-      // The API route sends 'Content-Disposition: attachment' which forces the download
-      a.download = fileName || 'Communique-F-Union.pdf';
-      document.body.appendChild(a);
-      a.click();
-
-      // Cleanup
-      document.body.removeChild(a);
     } catch (error) {
       console.error('Error during download:', error);
       // Fallback: open in new tab if anything goes wrong

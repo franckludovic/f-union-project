@@ -15,7 +15,7 @@ interface WhyParticipateCardProps {
  */
 export const WhyParticipateCard = ({ imageSrc, title, description, icon }: WhyParticipateCardProps) => {
   return (
-    <div className="flex flex-col bg-[#2D1B19] rounded-[2rem] overflow-hidden shadow-2xl transition-all duration-300 hover:scale-[1.02] group">
+    <div className="flex flex-col bg-[#010617] rounded-[2rem] overflow-hidden shadow-2xl transition-all duration-300 hover:scale-[1.02] group">
       {/* Top Image Section */}
       <div className="w-full aspect-[16/9] overflow-hidden relative">
         <img 
@@ -30,7 +30,7 @@ export const WhyParticipateCard = ({ imageSrc, title, description, icon }: WhyPa
       {/* Content Area */}
       <div className="p-4 md:p-5 flex flex-col gap-3">
         {/* Icon Container - Styled with a slightly lighter shade for depth */}
-        <div className="w-10 h-10 bg-[#453331] rounded-xl flex items-center justify-center text-white/90 shadow-lg border border-white/5">
+        <div className="w-10 h-10 bg-[#010617] rounded-xl flex items-center justify-center text-white/90 shadow-lg border border-white/5">
           {icon || (
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
