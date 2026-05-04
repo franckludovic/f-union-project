@@ -1,15 +1,17 @@
+"use client";
+
 import { SpeakerProfile } from "@/features/speakers/types";
 
 interface SpeakerProfileCardProps {
   speaker: SpeakerProfile;
-  onSelect: () => void;
+  onSelect?: () => void;
 }
 
 export const SpeakerProfileCard = ({ speaker, onSelect }: SpeakerProfileCardProps) => {
   return (
     <button
       type="button"
-      onClick={onSelect}
+      onClick={onSelect ? () => onSelect() : undefined}
       className="group text-left rounded-[2rem] border border-[#E8E8F0] bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus:outline-none"
     >
       <div className="relative overflow-hidden rounded-[1.75rem] bg-gray-100 mb-5 aspect-square">

@@ -23,21 +23,19 @@ export const SpeakersSection = () => {
         </div>
 
 
-      <Container className="pt-16 pb-16">
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
-          {SPEAKER_PROFILES.map((speaker) => (
-            <SpeakerProfileCard
-              key={speaker.id}
-              speaker={speaker}
-              onSelect={() => {
-                // no-op for landing preview
-              }}
-            />
+      <Container className="pt-16 pb-16 [&>div]:p-3 [&_img]:h-24 [&_h3]:text-lg [&_p]:text-xs">
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+          {SPEAKER_PROFILES.slice(0, 8).map((speaker) => (
+            <div key={speaker.id} className="aspect-[3/4]">
+              <SpeakerProfileCard
+                speaker={speaker}
+              />
+            </div>
           ))}
         </div>
 
         <div className="mt-15 flex justify-center">
-          <Link href="/speakers" className="bg-[#1b0a3d] text-white px-10 py-3 rounded-full font-bold text-sm tracking-wide shadow-lg hover:bg-[#2b165d] transition-colors">
+          <Link href="/speakers" prefetch={false} className="bg-[#1b0a3d] text-white px-10 py-3 rounded-full font-bold text-sm tracking-wide shadow-lg hover:bg-[#2b165d] transition-colors mt-8">
             View all speakers
           </Link>
         </div>
