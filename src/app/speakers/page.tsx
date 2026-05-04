@@ -38,7 +38,7 @@ export default function Page() {
         {filteredSpeakers.length === 0 ? (
           <p className="text-center text-[#5E7184] text-lg py-12">Aucun intervenant trouvé. Essayez un autre mot-clé.</p>
         ) : (
-          <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 items-stretch">
             {filteredSpeakers.map((speaker) => (
               <SpeakerProfileCard
                 key={speaker.id}

@@ -14,7 +14,7 @@ export const SpeakersSection = () => {
           </div>
           <Container className="relative z-10 text-center flex flex-col items-center justify-center">
             <h2 className="text-5xl md:text-7xl lg:text-[5.5rem] font-black mb-6 tracking-tight drop-shadow-md">
-              ELLES ONT PRIS LA PAROLE
+              ILS ONT PRIS LA PAROLE
             </h2>
             <p className="text-xl md:text-2xl lg:text-[1.35rem] font-bold text-white max-w-4xl px-4 leading-snug">
               Rencontres, sessions d’échanges et expériences conçues pour prolonger les discussions et transformer les idées en collaborations concrètes.
@@ -23,20 +23,21 @@ export const SpeakersSection = () => {
         </div>
 
 
-      <Container className="pt-16 pb-16 [&>div]:p-3 [&_img]:h-24 [&_h3]:text-lg [&_p]:text-xs">
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
-          {SPEAKER_PROFILES.slice(0, 8).map((speaker) => (
-            <div key={speaker.id} className="aspect-[3/4]">
-              <SpeakerProfileCard
-                speaker={speaker}
-              />
-            </div>
+      <Container className="pt-16 pb-16">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 items-stretch">
+          {SPEAKER_PROFILES.slice(0, 6).map((speaker) => (
+            <SpeakerProfileCard
+              key={speaker.id}
+              speaker={speaker}
+            />
           ))}
         </div>
 
         <div className="mt-15 flex justify-center">
-          <Link href="/speakers" prefetch={false} className="bg-[#1b0a3d] text-white px-10 py-3 rounded-full font-bold text-sm tracking-wide shadow-lg hover:bg-[#2b165d] transition-colors mt-8">
-            View all speakers
+          <Link href="/speakers" prefetch={false}>
+            <span className="bg-[#1b0a3d] text-white px-10 py-3 rounded-full font-bold text-sm tracking-wide shadow-lg hover:bg-[#2b165d] transition-colors mt-8 inline-flex items-center justify-center">
+              View all speakers
+            </span>
           </Link>
         </div>
       </Container>
