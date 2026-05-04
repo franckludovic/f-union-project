@@ -6,6 +6,10 @@ import offer1 from "@/core/assets/offer1.jpeg";
 import day2 from "@/core/assets/day2.jpeg";
 import offer3 from "@/core/assets/offer3.jpeg";
 import day1 from "@/core/assets/day1.jpeg";
+import participate1img from "@/core/assets/participateimg1.jpeg"
+import participate2img from "@/core/assets/participateimg2.jpeg"
+import participate3img from "@/core/assets/participateimg3.jpeg"
+import participate4img from "@/core/assets/participateimg4.jpeg"
 
 export const MissionSection = () => {
   return (
@@ -22,7 +26,7 @@ export const MissionSection = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 xl:gap-6 items-stretch mt-12">
             <WhyParticipateCard
-              imageSrc={offer1.src}
+              imageSrc={participate1img.src}
               title="Accéder à un réseau stratégique"
               description="Rencontrez plus de 600 femmes leaders, entrepreneures et décideuses institutionnelles. Créez des connexions directes avec celles qui font avancer l’Afrique."
               icon={
@@ -35,7 +39,7 @@ export const MissionSection = () => {
               }
             />
             <WhyParticipateCard
-              imageSrc={day2.src}
+              imageSrc={participate2img.src}
               title="Monter en compétences concrètement"
               description="Workshops business & carrière, coaching personnalisé (The Clinic), mentoring 1:1 : repartez avec des outils immédiatement actionnables."
               icon={
@@ -46,7 +50,7 @@ export const MissionSection = () => {
               }
             />
             <WhyParticipateCard
-              imageSrc={offer3.src}
+              imageSrc={participate3img.src}
               title="Gagner en visibilité là où tout se joue"
               description="Studio Pro 360, Power Hub, Investment Showroom : des espaces conçus pour vous montrer, pitcher et exister dans les sphères d’influence."
               icon={
@@ -57,7 +61,7 @@ export const MissionSection = () => {
               }
             />
             <WhyParticipateCard
-              imageSrc={day1.src}
+              imageSrc={participate4img.src}
               title="Contribuer à la transformation de l’Afrique"
               description="La vision Next Africa 2035 ne se fera pas sans vous. En participant, vous devenez actrice du changement et du leadership féminin sur le continent."
               icon={
