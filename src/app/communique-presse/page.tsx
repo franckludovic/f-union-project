@@ -11,7 +11,7 @@ export default async function CommuniquePressePage() {
   const pdfUrl = '/api/notion-pdf';
 
   return (
-    <main className="bg-summit-dark min-h-screen">
+    <main className="bg-[#f9fafb] min-h-screen">
       {/* Reusing the Hero Section */}
       <HeroSection />
 
@@ -21,9 +21,9 @@ export default async function CommuniquePressePage() {
           <div className="flex flex-col lg:grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
             
             {/* Right side (Mobile Top): Text and Download Button */}
-            <div className="text-white space-y-8 order-1 lg:order-2">
+            <div className="text-summit-dark space-y-8 order-1 lg:order-2">
               <div className="space-y-4">
-                <h2 className="text-3xl md:text-5xl font-black leading-tight text-white whitespace-pre-line break-words">
+                <h2 className="text-3xl md:text-5xl font-black leading-tight text-summit-dark whitespace-pre-line break-words">
                   {content.header}
                 </h2>
                 <div className="w-20 h-1.5 bg-summit-red rounded-full"></div>
@@ -32,7 +32,7 @@ export default async function CommuniquePressePage() {
               <div className="prose prose-invert max-w-none">
                 <div className="space-y-4">
                   {content.paragraphs.map((paragraph, index) => (
-                     <p key={index} className={`text-lg text-white/70 leading-relaxed ${index === 0 ? 'text-xl text-white/80 italic' : ''}`}>
+                     <p key={index} className={`text-lg text-gray-600 leading-relaxed ${index === 0 ? 'text-xl text-gray-800 font-medium' : ''}`}>
                        {paragraph}
                      </p>
                   ))}
@@ -55,7 +55,7 @@ export default async function CommuniquePressePage() {
               {content.hasPdf ? (
                 <PdfPreviewWrapper fileUrl={pdfUrl} />
               ) : (
-                <div className="w-full max-w-md aspect-[3/4] bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center flex-col gap-4 text-white/50 p-8 text-center">
+                <div className="w-full max-w-md aspect-[3/4] bg-gray-50 border border-gray-200 rounded-2xl flex items-center justify-center flex-col gap-4 text-gray-400 p-8 text-center shadow-sm">
                    <svg className="w-16 h-16 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
                    <p>No PDF uploaded yet.<br/>Please add a PDF file block to your Notion page.</p>
                 </div>

@@ -68,9 +68,9 @@ export async function getCommuniqueContent(): Promise<CommuniqueContent> {
   }
 }
 
-// Separate function to get the PDF URL and filename when requested
-export async function getNotionPdfUrl(): Promise<{ url: string; name: string } | null> {
-  if (!NOTION_PAGE_ID) return null;
+// Separate function to get the PDF URLs and filenames when requested
+export async function getNotionPdfUrls(): Promise<{ url: string; name: string }[]> {
+  if (!NOTION_PAGE_ID) return [];
 
   try {
     const response = await notion.blocks.children.list({
@@ -78,21 +78,22 @@ export async function getNotionPdfUrl(): Promise<{ url: string; name: string } |
     });
 
     const blocks = response.results as BlockObjectResponse[];
+    const pdfs: { url: string; name: string }[] = [];
 
     for (const block of blocks) {
       if (block.type === 'file') {
         const url = block.file.type === 'file' ? block.file.file.url : block.file.external.url;
-        const name = block.file.name || 'document.pdf';
-        if (url) return { url, name };
+        const name = block.file.name || `document-${pdfs.length + 1}.pdf`;
+        if (url) pdfs.push({ url, name });
       } else if (block.type === 'pdf') {
         const url = block.pdf.type === 'file' ? block.pdf.file.url : block.pdf.external.url;
-        const name = 'communique.pdf';
-        if (url) return { url, name };
+        const name = `communique-${pdfs.length + 1}.pdf`;
+        if (url) pdfs.push({ url, name });
       }
     }
-    return null;
+    return pdfs;
   } catch (error) {
-    console.error("Error fetching PDF from Notion:", error);
-    return null;
+    console.error("Error fetching PDFs from Notion:", error);
+    return [];
   }
 }

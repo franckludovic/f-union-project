@@ -141,7 +141,7 @@ export const HeroSection = () => {
 
 
       <Container className="relative z-20 mt-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-white items-center">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-white items-center">
 
           {/* Location */}
           <div className="flex items-center gap-4">

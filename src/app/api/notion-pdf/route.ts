@@ -1,18 +1,25 @@
 import { NextResponse } from 'next/server';
-import { getNotionPdfUrl } from '@/lib/notion';
+import { getNotionPdfUrls } from '@/lib/notion';
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const isDownload = searchParams.get('download') === 'true';
+  const isList = searchParams.get('list') === 'true';
+  const index = parseInt(searchParams.get('index') || '0', 10);
 
   try {
-    const freshPdfData = await getNotionPdfUrl();
-    console.log('Fetched PDF Data:', freshPdfData);
+    const pdfs = await getNotionPdfUrls();
+    
+    if (isList) {
+      return NextResponse.json(pdfs);
+    }
 
-    if (!freshPdfData || !freshPdfData.url || freshPdfData.url.trim() === '') {
-      console.warn('PDF Data from Notion is missing or has empty URL:', freshPdfData);
+    if (!pdfs || pdfs.length === 0) {
+      console.warn('PDF Data from Notion is missing or empty');
       return new NextResponse('No valid PDF URL found in Notion page', { status: 404 });
     }
+
+    const freshPdfData = pdfs[index] || pdfs[0];
 
     console.log('Proxying PDF URL:', freshPdfData.url);
 

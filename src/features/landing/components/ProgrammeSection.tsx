@@ -28,6 +28,7 @@ const FlipCard = ({
   innerSpace,
   backDescription,
   href,
+  showbutton = true,
   isDetailFront = false,
   showButton = true,
 }: FlipCardProps) => {
@@ -59,15 +60,16 @@ const FlipCard = ({
         <p className="text-white/90 font-medium text-[30px] leading-relaxed text-center mt-4">
           {backDescription}
         </p>
-        <div className="mt-auto pt-6 flex justify-center">
-          {showButton && (
-            <Link href={href} onClick={(e) => e.stopPropagation()}>
-              <button className="bg-[#4d0c0c] hover:bg-[#6b1313] text-white font-bold py-3 px-6 rounded-full text-sm transition-colors border-2 border-[#2b0505]/30 shadow-xl">
-                Voir le programme complet
-              </button>
-            </Link>
-          )}
+        {showbutton == true ? <div className="mt-auto pt-6 flex justify-center">
+          <Link href={href} onClick={(e) => e.stopPropagation()}>
+            <button className="bg-[#4d0c0c] hover:bg-[#6b1313] text-white font-bold py-3 px-6 rounded-full text-sm transition-colors border-2 border-[#2b0505]/30 shadow-xl">
+              Voir le programme complet
+            </button>
+          </Link>
         </div>
+          :
+          <></>
+        }
       </div>
     </div>
   );
@@ -111,15 +113,17 @@ const FlipCard = ({
         <p className="text-white/90 font-medium text-[20px] leading-relaxed text-center mt-4 text-balance">
           {backDescription}
         </p>
-        <div className="mt-auto pt-6 flex justify-center">
-          {showButton && (
+        {
+          showbutton ? <div className="mt-auto pt-6 flex justify-center">
             <Link href={href} onClick={(e) => e.stopPropagation()}>
               <button className="bg-[#4d0c0c] hover:bg-[#6b1313] text-white font-bold py-3 px-6 rounded-full text-sm transition-colors border-2 border-[#2b0505]/30 shadow-xl">
                 Voir le programme complet
               </button>
             </Link>
-          )}
-        </div>
+          </div>
+            :
+            <></>
+        }
       </div>
     </div>
   );
@@ -169,9 +173,10 @@ export const ProgrammeSection = () => {
         <Container className="px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
             <FlipCard
+              showbutton={false}
               frontImage={day1.src}
               frontTitle="Le rendez-vous du Soft Power"
-              dayNumber="28 Mai"
+              dayNumber="Jour 1 : 28 Mai"
               innerSpace="8"
               href=""
               backTitle={
