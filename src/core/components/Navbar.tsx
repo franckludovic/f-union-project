@@ -68,7 +68,6 @@ export const Navbar = () => {
             </div>
 
             <Link href="/speakers" className={`${isScrolled ? "text-[#0d1f36]" : "text-white/90"} hover:text-gray-600 transition-colors uppercase tracking-wide`}>Intervenant(e)s</Link>
-            <Link href="#partenaires" className={`${isScrolled ? "text-[#0d1f36]" : "text-white/90"} hover:text-gray-600 transition-colors uppercase tracking-wide`}>Partenaires</Link>
             <Link href="#contact" className={`${isScrolled ? "text-[#0d1f36]" : "text-white/90"} hover:text-gray-600 transition-colors uppercase tracking-wide`}>Contact</Link>
             <Link href="/communique-presse" className={`${isScrolled ? "text-[#0d1f36]" : "text-white/90"} hover:text-gray-600 transition-colors uppercase tracking-wide`}>Press</Link>
           </div>
@@ -134,7 +133,6 @@ export const Navbar = () => {
                   subLinks: programmeLinks
                 },
                 { href: "/speakers", label: "Intervenant(e)s" },
-                { href: "#partenaires", label: "Partenaires" },
                 { href: "#contact", label: "Contact" },
                 { href: "/communique-presse", label: "Press" }
               ].map((link) => (
