@@ -295,7 +295,7 @@ export const JOUR_3_SESSIONS: Session[] = [
   {
     id: "j3_s2",
     title: "F-Union Talents Africa 2035 Challenge – Pitch your future. Build Africa",
-    hall: "Conference Hall 6",
+    hall: "conference Hall 3",
     startTime: "08:00",
     endTime: "11:30",
     cible: "Talent-Next Gen",
@@ -329,7 +329,7 @@ export const JOUR_3_SESSIONS: Session[] = [
   {
     id: "j3_s5",
     title: "Table Ronde : Ce que les entreprises attendent des jeunes talents aujourd’hui",
-    hall: "Conference Hall 6",
+    hall: "conference Hall 3",
     startTime: "14:00",
     endTime: "15:30",
     cible: "Talent-Next Gen",

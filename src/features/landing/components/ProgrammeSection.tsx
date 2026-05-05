@@ -17,7 +17,7 @@ type FlipCardProps = {
   isDetailFront?: boolean;
   innerSpace?: string;
   href: string;
-  showButton?: boolean;
+  showbutton?: boolean;
 };
 
 const FlipCard = ({
@@ -30,7 +30,6 @@ const FlipCard = ({
   href,
   showbutton = true,
   isDetailFront = false,
-  showButton = true,
 }: FlipCardProps) => {
   const [tapped, setTapped] = useState(false);
 
@@ -186,13 +185,12 @@ export const ProgrammeSection = () => {
                 </>
               }
               backDescription="Dialogue de haut niveau pour des décideuses engagés."
-              showButton={false}
             />
 
             <FlipCard
               frontImage={day2.src}
               frontTitle="Summit Day"
-              dayNumber="Jour 1"
+              dayNumber="Jour 2"
               innerSpace="2"
               href="/programme/jour2"
               backTitle={
@@ -206,7 +204,7 @@ export const ProgrammeSection = () => {
             <FlipCard
               frontImage={day3.src}
               frontTitle="Expérience & Connexions"
-              dayNumber="Jour 2"
+              dayNumber="Jour 3"
               innerSpace="8"
               href="/programme/jour3"
               backTitle={

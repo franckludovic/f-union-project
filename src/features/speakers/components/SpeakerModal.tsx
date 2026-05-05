@@ -18,19 +18,19 @@ export const SpeakerModal = ({ speaker, onClose }: SpeakerModalProps) => {
         className="relative w-full max-w-4xl rounded-[2rem] bg-white shadow-2xl"
         onClick={(event) => event.stopPropagation()}
       >
-        <button
+        {/* <button
           type="button"
           onClick={onClose}
           className="absolute left-5 top-5 rounded-full bg-white/90 px-4 py-2 text-[#0F2E4C] shadow-md transition hover:bg-white"
           aria-label="Close speaker profile"
         >
           Quitter
-        </button>
+        </button> */}
 
         <button
           type="button"
           onClick={onClose}
-          className="absolute right-5 top-5 rounded-full bg-white/90 p-2 text-[#0F2E4C] shadow-md transition hover:bg-white"
+          className="absolute right-5 top-5 bg-[#a493be] rounded-full  p-2 text-[#0F2E4C] shadow-md transition hover:bg-[#845ec2]"
           aria-label="Close speaker profile"
         >
           &#10005;
