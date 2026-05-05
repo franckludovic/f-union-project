@@ -175,7 +175,7 @@ export const ProgrammeSection = () => {
               showbutton={false}
               frontImage={day1.src}
               frontTitle="Le rendez-vous du Soft Power"
-              dayNumber="Jour 1 : 28 Mai"
+              dayNumber="28 Mai"
               innerSpace="8"
               href=""
               backTitle={
