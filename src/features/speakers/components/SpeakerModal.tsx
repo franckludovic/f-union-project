@@ -44,7 +44,7 @@ export const SpeakerModal = ({ speaker, onClose }: SpeakerModalProps) => {
 
             <div className="space-y-6">
               <div>
-                <p className="text-sm uppercase tracking-[0.24em] text-[#845ec2]">Profil intervenant</p>
+                <p className="text-sm uppercase tracking-[0.24em] text-[#845ec2]">Profil</p>
                 <h2 className="mt-3 text-3xl font-black text-[#0F2E4C]">{speaker.name}</h2>
                 <p className="mt-2 text-sm text-[#4B5668]">{speaker.role}</p>
                 {speaker.company && <p className="text-sm text-[#6B7280]">{speaker.company}</p>}

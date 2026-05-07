@@ -60,11 +60,6 @@ Marketing), Project Management, Talent Effectiveness, Capabilities Development.
 
 
 
-Santher Mbacham : Communica+on Lead *Camerounaises in Tech -
-MD Image Na+on PR*
-
-
-
 Thierry Ntamack est un acteur, réalisateur, scénariste et producteur de cinéma
 camerounais, reconnu pour ses rôles dans des films comme Le Blanc d’Eyenga et La Patrie
 d’Abord, ainsi que pour son engagement en faveur du développement du cinéma

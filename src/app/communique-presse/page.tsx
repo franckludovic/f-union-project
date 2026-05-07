@@ -26,7 +26,6 @@ export default async function CommuniquePressePage() {
                 <h2 className="text-3xl md:text-5xl font-black leading-tight text-summit-dark whitespace-pre-line break-words">
                   {content.header}
                 </h2>
-                <div className="w-20 h-1.5 bg-summit-red rounded-full"></div>
               </div>
 
               <div className="prose prose-invert max-w-none">

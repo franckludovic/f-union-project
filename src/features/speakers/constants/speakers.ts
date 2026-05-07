@@ -8,7 +8,7 @@ import ManuelaKAMADJOU from "@/core/assets/manuela-kamadjou.jpg";
 import MeGaelleNGUE from "@/core/assets/me-gaelle-ngue.jpg";
 import PechensDOUMBE from "@/core/assets/pechens-doumbe.jpg";
 import PriscaHeuya from "@/core/assets/prisca-heuya.png";
-import SantherMbacham from "@/core/assets/santher-mbacham.png";
+
 import ThierryNtamack from "@/core/assets/thierry-ntamack.jpg";
 import AnabelleKOUNG from "@/core/assets/anabelle-koung.jpeg";
 import AurelieGuifo from "@/core/assets/aurelie-guifo.jpg";
@@ -28,22 +28,6 @@ export const SPEAKER_PROFILES: SpeakerProfile[] = [
         id: "j2_s5",
         title: "Workshop : Scale Up Room",
         href: "/programme/jour2#j2_s5"
-      }
-    ]
-  },
-  {
-    id: "santher-mbacham",
-    name: "Santher Mbacham",
-    role: "Communication Lead",
-    company: "Camerounaises in Tech / MD Image Nation PR",
-    description: "Experte en communication pour les technologies et les écosystèmes féminins.",
-    imageUrl: SantherMbacham.src,
-    bio: "Santher Mbacham est Communication Lead de Camerounaises in Tech et MD de Image Nation PR.",
-    sessions: [
-      {
-        id: "j2_s4",
-        title: "PANEL 1 : Faire carrière dans la tech et briser les plafonds de verre",
-        href: "/programme/jour2#j2_s4"
       }
     ]
   },
@@ -93,6 +77,21 @@ export const SPEAKER_PROFILES: SpeakerProfile[] = [
     ]
   },
   {
+    id: "linda-nganko",
+    name: "Linda Loretta Nganko",
+    role: "Experte RH",
+    description: "Experte RH reconnue, fondatrice de 2LN Expertise et promotrice du leadership humain.",
+    imageUrl: LindaNganko.src,
+    bio: "Linda est une experte RH reconnue à l'échelle africaine, avec plus de 20 ans d'expérience RH, notamment au sein de MTN Cameroon et du Groupe Activa. Elle a fondé 2LN Expertise, un laboratoire RH proposant des outils et conseils pour les experts RH.",
+    sessions: [
+      {
+        id: "j3_s4",
+        title: "Réinventer sa carrière",
+        href: "/programme/jour3#j3_s4"
+      }
+    ]
+  },
+  {
     id: "aurelie-guifo",
     name: "Aurélie Guifo",
     role: "Juriste & banquière",
@@ -122,21 +121,7 @@ export const SPEAKER_PROFILES: SpeakerProfile[] = [
       }
     ]
   },
-  {
-    id: "linda-nganko",
-    name: "Linda Loretta Nganko",
-    role: "Experte RH",
-    description: "Experte RH reconnue, fondatrice de 2LN Expertise et promotrice du leadership humain.",
-    imageUrl: LindaNganko.src,
-    bio: "Linda est une experte RH reconnue à l'échelle africaine, avec plus de 20 ans d'expérience RH, notamment au sein de MTN Cameroon et du Groupe Activa. Elle a fondé 2LN Expertise, un laboratoire RH proposant des outils et conseils pour les experts RH.",
-    sessions: [
-      {
-        id: "j3_s4",
-        title: "Réinventer sa carrière",
-        href: "/programme/jour3#j3_s4"
-      }
-    ]
-  },
+  
   {
     id: "anabelle-koung",
     name: "Anabelle KOUNG",

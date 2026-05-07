@@ -8,7 +8,6 @@ import intervenant6 from "@/core/assets/intervenant6.png";
 import intervenant7 from "@/core/assets/intervenant7.png";
 import intervenant8 from "@/core/assets/intervenant8.png";
 import AurelieChazai from "@/core/assets/aurelie-chazai.png";
-import SantherMbacham from "@/core/assets/santher-mbacham.png";
 import ThierryNtamack from "@/core/assets/thierry-ntamack.jpg";
 import EditheNkenHOT from "@/core/assets/edithe-nken-hot.jpg";
 import GaelleNgue from "@/core/assets/me-gaelle-ngue.jpg";
@@ -186,7 +185,6 @@ export const JOUR_2_SESSIONS: Session[] = [
     endTime: "15:00",
     cible: "Next Gen",
     speakers: [
-      { id: "sp_j2_4_1", name: "Santher Mbacham", role: "Modératrice | Communication Lead Camerounaises in Tech", imageUrl: SantherMbacham.src },
       { id: "sp_j2_4_2", name: "Lydie Ngo Nogol", role: "Intervenante", imageUrl: intervenant3.src },
       { id: "sp_j2_4_3", name: "Carine Dîkambi", role: "Intervenante", imageUrl: intervenant4.src },
       { id: "sp_j2_4_4", name: "Belinda NGONO", role: "Regional Business Development West & Central Francophone Africa", imageUrl: intervenant5.src },

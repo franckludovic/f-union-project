@@ -9,6 +9,9 @@ export const Jour1Screen = () => {
       <ProgrammeView
         sessions={JOUR_1_SESSIONS}
         googleFormUrl=""
+        pdfUrl="/pdfs/programme-jour1.pdf"
+        pdfFileName="Programme-F-UNION-Jour-1.pdf"
+        showSpeakers={false}
       />
     </>
   );

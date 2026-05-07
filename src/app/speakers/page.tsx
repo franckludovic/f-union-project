@@ -19,10 +19,13 @@ export default function Page() {
   );
 
   return (
-    <main className="bg-white pt-24 pb-24">
-      <Container>
+    <main className="relative bg-white pt-24 pb-24 min-h-screen">
+      {/* Background Gradient for Navbar visibility */}
+      <div className="absolute top-0 left-0 right-0 h-[400px] bg-gradient-to-b from-[#845ec2]/80 via-[#845ec2]/30 to-transparent pointer-events-none" />
+      
+      <Container className="relative">
         <div className="mx-auto max-w-5xl text-center pb-16">
-          <SectionHeading hashtag="Intervenants" title="Intervenant(e)s" subtitle="Découvrez les profils des speakers confirmés et accédez à leurs panels directement depuis leur fiche." />
+          <SectionHeading hashtag="Intervenant(e)s" title="" subtitle="Découvrez les profils des speakers confirmés et accédez à leurs panels directement depuis leur fiche." />
         </div>
 
         <div className="mb-8 max-w-md mx-auto">
