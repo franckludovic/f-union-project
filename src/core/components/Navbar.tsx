@@ -75,7 +75,7 @@ export const Navbar = () => {
           <div className="flex items-center gap-4">
             {/* Desktop Button*/}
             <div className="hidden lg:block">
-              <Button variant="navy" size="md" className="rounded-full text-xs font-bold px-6">
+              <Button variant="navy" size="md" href="https://billeterie.f-union.org/" className="rounded-full text-xs font-bold px-6">
                 Reserver ma place
               </Button>
             </div>

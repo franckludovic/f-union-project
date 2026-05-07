@@ -1,17 +1,22 @@
-
 import React from 'react';
+import Link from 'next/link';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'purple' | 'blue' | 'red' | 'white' | 'outline' | 'navy';
   size?: 'sm' | 'md' | 'lg';
+  href?: string;
+  target?: string;
+  rel?: string;
 }
 
 export const Button = ({
   children,
   variant = 'purple',
-
   size = 'md',
   className = '',
+  href,
+  target,
+  rel,
   ...props
 }: ButtonProps) => {
 
@@ -32,9 +37,39 @@ export const Button = ({
     lg: "px-10 py-3 text-lg"
   };
 
+  const combinedClassName = `${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`;
+
+  if (href) {
+    const isExternal = href.startsWith('http') || href.startsWith('mailto:');
+    if (isExternal) {
+      return (
+        <a 
+          href={href} 
+          className={combinedClassName} 
+          target={target || '_blank'} 
+          rel={rel || 'noopener noreferrer'}
+          {...(props as any)}
+        >
+          {children}
+        </a>
+      );
+    }
+    return (
+      <Link 
+        href={href} 
+        className={combinedClassName} 
+        target={target} 
+        rel={rel}
+        {...(props as any)}
+      >
+        {children}
+      </Link>
+    );
+  }
+
   return (
     <button
-      className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`}
+      className={combinedClassName}
       {...props}
     >
       {children}
