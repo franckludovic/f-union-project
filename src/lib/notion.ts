@@ -64,7 +64,7 @@ export async function getCommuniqueContent(): Promise<CommuniqueContent> {
     };
   } catch (error) {
     console.error("Error fetching from Notion:", error);
-    return { header: 'Communiqué de Presse F-UNION AFRICA 2026', paragraphs: ['Failed to load content from Notion.'], hasPdf: false };
+    return { header: 'Communiqué de Presse F-UNION AFRICA 2026', paragraphs: ['Failed to load content.'], hasPdf: false };
   }
 }
 
