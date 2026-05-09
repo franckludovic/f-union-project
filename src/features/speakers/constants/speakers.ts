@@ -8,12 +8,13 @@ import ManuelaKAMADJOU from "@/core/assets/manuela-kamadjou.jpg";
 import MeGaelleNGUE from "@/core/assets/me-gaelle-ngue.jpg";
 import PechensDOUMBE from "@/core/assets/pechens-doumbe.jpg";
 import PriscaHeuya from "@/core/assets/prisca-heuya.png";
-
 import ThierryNtamack from "@/core/assets/thierry-ntamack.jpg";
 import AnabelleKOUNG from "@/core/assets/anabelle-koung.jpeg";
 import AurelieGuifo from "@/core/assets/aurelie-guifo.jpg";
 import EdithNkenHOT from "@/core/assets/edithe-nken-hot.jpg";
 import LindaNganko from "@/core/assets/linda-nganko.jpeg";
+import RoseDika from "@/core/assets/rose_dika.png";
+import WilfriedDjopa from "@core/assets/wilfried_djopa.jpg";
 
 export const SPEAKER_PROFILES: SpeakerProfile[] = [
   {
@@ -77,6 +78,21 @@ export const SPEAKER_PROFILES: SpeakerProfile[] = [
     ]
   },
   {
+    id: "rose-dika",
+    name: "Rose Dika",
+    role: "PMO F-Union Africa Summit 2",
+    description: "PMO F-Union Africa Summit 2",
+    imageUrl: RoseDika.src,
+    bio: "",
+    sessions: [
+      {
+        id: "j2_s8",
+        title: "ATELIER VIP : Leadership Styling",
+        href: "/programme/jour2#j2_s8"
+      }
+    ]
+  },
+  {
     id: "linda-nganko",
     name: "Linda Loretta Nganko",
     role: "Experte RH",
@@ -125,7 +141,7 @@ export const SPEAKER_PROFILES: SpeakerProfile[] = [
   {
     id: "anabelle-koung",
     name: "Anabelle KOUNG",
-    role: "Modératrice & innovatrice",
+    role: "Modératrice",
     description: "Responsable de l'innovation et de la stratégie, experte de la transformation des organisations.",
     imageUrl: AnabelleKOUNG.src,
     bio: "Anabelle Koung est une professionnelle de l’innovation et de la stratégie, évoluant au croisement de l’assurance, du développement de produits et de la transformation des organisations.",
@@ -210,6 +226,22 @@ export const SPEAKER_PROFILES: SpeakerProfile[] = [
         id: "j3_s9",
         title: "AFTER DARK CLOTURE : FLASH TALK",
         href: "/programme/jour3#j3_s9"
+      }
+    ]
+  },
+  {
+    id: "wilfried-djopa",
+    name: "Wilfried Djopa",
+    role: "Founder & CEO de Genuka",
+    company: "Genuka",
+    description: " ",
+    imageUrl: WilfriedDjopa.src,
+    bio: " ",
+    sessions: [
+      {
+        id: "j2_s5",
+        title: "Workshop : Scale Up Room – 5 entrepreneurs, 5 défis stratégiques, face à un panel d’experts",
+        href: "/programme/jour2#j2_s5"
       }
     ]
   }

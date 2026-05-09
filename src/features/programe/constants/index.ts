@@ -21,6 +21,8 @@ import ChristianTchoupe from "@/core/assets/christian-tchoupe.png";
 import PechensDOUMBE from "@/core/assets/pechens-doumbe.jpg";
 import PriscaHeuya from "@/core/assets/prisca-heuya.png";
 import JocelyneNgassam from "@/core/assets/jocelyne-ngassam.jpg";
+import RoseDika from "@/core/assets/rose_dika.png";
+import WilfriedDjopa from "@core/assets/wilfried_djopa.jpg";
 
 export const JOUR_1_SESSIONS: Session[] = [
   {
@@ -203,7 +205,8 @@ export const JOUR_2_SESSIONS: Session[] = [
       { id: "sp_j2_5_2", name: "CCA representative", role: "Finance & Fiscalité", imageUrl: intervenant8.src },
       { id: "sp_j2_5_3", name: "QHSE TBC", role: "Expert QHSE", imageUrl: intervenant1.src },
       { id: "sp_j2_5_4", name: "Diane Audrey Ngako", role: "Marketing et Pub", imageUrl: intervenant2.src },
-      { id: "sp_j2_5_5", name: "Genuka representative", role: "Digital Expert", imageUrl: intervenant3.src }
+      { id: "sp_j2_5_5", name: "Genuka representative", role: "Digital Expert", imageUrl: intervenant3.src },
+      { id: "sp_j2_5_6", name: "Wilfried Djopa", role: "Founder & CEO de Genuka", imageUrl: WilfriedDjopa.src },
     ]
   },
   {
@@ -243,10 +246,11 @@ export const JOUR_2_SESSIONS: Session[] = [
     endTime: "17:00",
     cible: "All",
     speakers: [
-      { id: "sp_j2_8_1", name: "Rose DIKA", role: "Modératrice", imageUrl: intervenant5.src },
+      { id: "sp_j2_8_1", name: "Rose Dika", role: "Modératrice", imageUrl: RoseDika.src },
       { id: "sp_j2_8_2", name: "Scensoria representative", role: "Intervenante", imageUrl: intervenant6.src },
       { id: "sp_j2_8_3", name: "Edithe Nken Hot", role: "Founder and CEO | Strategic Marketing", imageUrl: EditheNkenHOT.src },
-      { id: "sp_j2_8_4", name: "Gaelle Ngue", role: "Avocate Gérante", imageUrl: GaelleNgue.src }
+      { id: "sp_j2_8_4", name: "Gaelle Ngue", role: "Avocate Gérante", imageUrl: GaelleNgue.src },
+      { id: "sp_j2_8_5", name: "Rose Dika", role: "PMO F-Union Africa Summit 2", imageUrl: RoseDika.src },
     ]
   },
   {
