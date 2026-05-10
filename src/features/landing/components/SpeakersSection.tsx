@@ -36,7 +36,7 @@ export const SpeakersSection = () => {
         <div className="mt-15 flex justify-center">
           <Link href="/speakers" prefetch={false}>
             <span className="bg-[#1b0a3d] text-white px-10 py-3 rounded-full font-bold text-sm tracking-wide shadow-lg hover:bg-[#2b165d] transition-colors mt-8 inline-flex items-center justify-center">
-              View all speakers
+              Voir Plus
             </span>
           </Link>
         </div>

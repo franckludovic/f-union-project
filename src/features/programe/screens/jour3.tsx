@@ -20,7 +20,7 @@ export const Jour3Screen = () => {
         speakerProfiles={SPEAKER_PROFILES}
         onSpeakerClick={setActiveSpeaker}
         pdfUrl="/pdfs/programme-jour3.pdf"
-        pdfFileName="Programme-F-UNION-Jour-3.pdf"
+        { /* pdfFileName="Programme-F-UNION-Jour-3.pdf" */}
         showSpeakers={false}
       />
       <SpeakerModal speaker={activeSpeaker} onClose={() => setActiveSpeaker(null)} />
