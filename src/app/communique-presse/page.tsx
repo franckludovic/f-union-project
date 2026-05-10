@@ -39,14 +39,14 @@ export default async function CommuniquePressePage() {
                 </div>
               </div>
 
-              <div className="pt-4 flex flex-col sm:flex-row gap-4">
+              {/* <div className="pt-4 flex flex-col sm:flex-row gap-4">
                 {content.hasPdf && (
                   <DownloadButton
                     fileUrl={pdfUrl}
                     fileName="COMMUNIQUE-DE-PRESSE-F-UNION.pdf"
                   />
                 )}
-              </div>
+              </div> */}
             </div>
 
             {/* Left side (Mobile Bottom): PDF Thumbnail Preview OR Media Partner Card */}

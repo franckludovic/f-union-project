@@ -25,7 +25,7 @@ export default function Page() {
       
       <Container className="relative">
         <div className="mx-auto max-w-5xl text-center pb-16">
-          <SectionHeading hashtag="Intervenant(e)s" title="" subtitle="Découvrez les profils des speakers confirmés et accédez à leurs panels directement depuis leur fiche." />
+          <SectionHeading hashtag="Intervenant(e)s" isHashtag={false} title="" subtitle="Découvrez les profils des speakers confirmés et accédez à leurs panels directement depuis leur fiche." />
         </div>
 
         <div className="mb-8 max-w-md mx-auto">
