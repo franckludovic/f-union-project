@@ -19,7 +19,7 @@ export const Jour2Screen = () => {
         googleFormUrl="https://docs.google.com/forms/d/e/1FAIpQLSce13x-EFo4YUFpU7AqmWxIFyghqqlvGPTnmqJDpi8Set_Zig/viewform?embedded=true"
         speakerProfiles={SPEAKER_PROFILES}
         onSpeakerClick={setActiveSpeaker}
-       {/* pdfUrl="/pdfs/programme-jour2.pdf"*/}
+        pdfUrl="/pdfs/programme-jour2.pdf"
         pdfFileName="Programme-F-UNION-Jour-2.pdf"
         showSpeakers={false}
       />

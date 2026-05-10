@@ -72,7 +72,7 @@ export const ProgrammeView = ({
         </div>
       </Container>
       
-      <DownloadProgrammeCenter pdfUrl={pdfUrl} pdfFileName={pdfFileName} />
+      {/* <DownloadProgrammeCenter pdfUrl={pdfUrl} pdfFileName={pdfFileName} /> */}
       
       {googleFormUrl && <GoogleFormSection formUrl={googleFormUrl} />}
     </div>
