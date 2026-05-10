@@ -14,7 +14,16 @@ import AurelieGuifo from "@/core/assets/aurelie-guifo.jpg";
 import EdithNkenHOT from "@/core/assets/edithe-nken-hot.jpg";
 import LindaNganko from "@/core/assets/linda-nganko.jpeg";
 import RoseDika from "@/core/assets/rose_dika.png";
-import WilfriedDjopa from "@core/assets/wilfried_djopa.jpg";
+import WilfriedDjopa from "@/core/assets/wilfried_djopa.jpg";
+import JessicaMambo from "@/core/assets/jessica-mambo.jpeg";
+import PatriciaMebara from "@/core/assets/Patricia-Mebara.jpg.jpeg";
+import BelindaNgono from "@/core/assets/belinda-ngono.jpeg";
+import SerangeEbala from "@/core/assets/Serange-Ebala.jpeg";
+import EvaYoumbi from "@/core/assets/Eva-Youmbi.jpeg";
+import DianeAudreyNgako from "@/core/assets/Diane-Audrey-Ngako.jpeg";
+import PaolaYoko from "@/core/assets/Paola-Yoko.jpeg";
+import RodolphaBwanga from "@/core/assets/Rodolpha-Bwanga.jpeg";
+import ChantalEdie from "@/core/assets/Chantal-Edie.jpeg";
 
 export const SPEAKER_PROFILES: SpeakerProfile[] = [
   {
@@ -243,8 +252,144 @@ export const SPEAKER_PROFILES: SpeakerProfile[] = [
         title: "Workshop : Scale Up Room – 5 entrepreneurs, 5 défis stratégiques, face à un panel d’experts",
         href: "/programme/jour2#j2_s5"
       }
+    ]  },
+  {
+    id: "jessica-mambo",
+    name: "Jessica Mambo",
+    role: "Évangéliste de l'emploi & Spécialiste RH",
+    description: "Accompagnement des talents et spécialiste de l'insertion professionnelle en Afrique.",
+    imageUrl: JessicaMambo.src,
+    bio: "Évangéliste de l'emploi et spécialiste de l'insertion professionnelle, Jessica accompagne le développement des talents et l'employabilité. Experte en ressources humaines dédiée aux TPE/PME africaines, elle met son savoir-faire au service de la performance organisationnelle. Fondatrice d'« Égalité Pour Tous », elle œuvre pour une inclusion professionnelle plus juste et équitable.",
+    sessions: [
+      {
+        id: "j3_s5",
+        title: "Table Ronde : Ce que les entreprises attendent des jeunes talents aujourd'hui",
+        href: "/programme/jour3#j3_s5"
+      }
     ]
-  }
+  },
+  {
+    id: "patricia-mebara",
+    name: "Patricia MEBARA",
+    role: "Présidente de CIT",
+    description: "Leader dans le secteur technologique et du développement des carrières.",
+    imageUrl: PatriciaMebara.src,
+    bio: "",
+    sessions: [
+      {
+        id: "j2_s4",
+        title: "Table Ronde : Faire carrière dans la Tech",
+        href: "/programme/jour2#j2_s4"
+      }
+    ]
+  },
+  {
+    id: "belinda-ngono",
+    name: "Belinda Ngono",
+    role: "Regional Business Development Lead",
+    description: "Directrice du développement commercial pour l'Afrique francophone.",
+    imageUrl: BelindaNgono.src,
+    bio: "",
+    sessions: [
+      {
+        id: "j2_s4",
+        title: "Table Ronde : Faire carrière dans la Tech",
+        href: "/programme/jour2#j2_s4"
+      }
+    ]
+  },
+  {
+    id: "serange-ebala",
+    name: "Serange Clélia Ebela Abena",
+    role: "Ingénieure en Télécommunications & Fondatrice",
+    company: "InspireTech SARL",
+    description: "Ingénieure et femme entrepreneur dédiée à la vulgarisation technologique en Afrique.",
+    imageUrl: SerangeEbala.src,
+    bio: "Née à Bafoussam, Serange est une ingénieure en télécommunications, femme entrepreneur et mère de deux enfants. Elle consacre son énergie à vulgariser la technologie pour faciliter la vie des Camerounais. Fondatrice d'InspireTech SARL spécialisée en déploiement d'infrastructures réseau et intégration IT, elle bâtit un écosystème numérique camerounais plus inclusif et résolument tourné vers l'avenir.",
+    sessions: [
+      {
+        id: "j3_s1",
+        title: "1:1 MENTORAT",
+        href: "/programme/jour3#j3_s1"
+      }
+    ]
+  },
+  {
+    id: "eva-youmbi",
+    name: "Eva Youmbi",
+    role: "Directrice des Marchés de Capitaux",
+    company: "FedhEn Capital",
+    description: "Experte en finances, marchés de capitaux et inclusion financière en Afrique.",
+    imageUrl: EvaYoumbi.src,
+    bio: "Eva Youmbi est Directrice des marchés de capitaux chez FedhEn Capital, où elle accompagne des États et des entreprises stratégiques dans leurs opérations de financement. Diplômée de ESCP Business School et certifiée en inclusion financière par le FMI, elle s'intéresse au développement des marchés financiers africains et à l'accès au financement pour les PME et les jeunes entrepreneurs.",
+    sessions: [
+      {
+        id: "j2_s10",
+        title: "Investment Corner Powered by WIN",
+        href: "/programme/jour2#j2_s10"
+      }
+    ]
+  },
+  {
+    id: "diane-audrey-ngako",
+    name: "Diane Audrey Ngako",
+    role: "Experte Marketing & Entrepreneuriat",
+    description: "Entrepreneur et experte en stratégies commerciales et marketing.",
+    imageUrl: DianeAudreyNgako.src,
+    bio: "",
+    sessions: [
+      {
+        id: "j2_s5",
+        title: "Workshop : Scale Up Room – 5 entrepreneurs, 5 défis stratégiques, face à un panel d'experts",
+        href: "/programme/jour2#j2_s5"
+      }
+    ]
+  },
+  {
+    id: "paola-yoko",
+    name: "Paola Yoko",
+    role: "Productrice, Manageuse & Entrepreneure",
+    description: "Leader dans les industries culturelles et créatives en Afrique.",
+    imageUrl: PaolaYoko.src,
+    bio: "Paola Yoko est une productrice et manageuse engagée dans le développement des industries culturelles et des dynamiques d'insertion professionnelle en Afrique. Fondatrice du label LVL UP CORP, elle accompagne le développement de carrières artistiques et la structuration de projets musicaux. Cofondatrice et Secrétaire Générale de l'ADCC, elle développe une approche transversale connectant industries culturelles, formation professionnelle et opportunités économiques.",
+    sessions: [
+      {
+        id: "j2_s6",
+        title: "Table Ronde : Leadership féminin dans l'industrie créative",
+        href: "/programme/jour2#j2_s6"
+      }
+    ]
+  },
+  {
+    id: "rodolpha-bwanga",
+    name: "Rodolpha Bwanga",
+    role: "Directrice Générale",
+    company: "Trace Cameroun",
+    description: "Leader dans les industries culturelles et créatives, spécialisée dans la promotion de la musique africaine.",
+    imageUrl: RodolphaBwanga.src,
+    bio: "Rodolpha Bwanga est Directrice Générale de Trace Cameroun, filiale du groupe TRACE. Depuis près de dix ans, elle contribue au développement de projets valorisant la musique, les talents et les expressions culturelles africaines. Engagée pour la promotion de l'entrepreneuriat et de la créativité, elle s'intéresse au rôle des industries culturelles comme levier économique pour l'Afrique.",
+    sessions: [
+      {
+        id: "j2_s6",
+        title: "Table Ronde : Leadership féminin dans l'industrie créative",
+        href: "/programme/jour2#j2_s6"
+      }
+    ]
+  },
+  {
+    id: "chantal-edie-ntube",
+    name: "Chantal Edie Ntube",
+    role: "Photographe, Écrivaine & Curatrice",
+    description: "Artiste camerounaise engagée pour l'art comme outil de changement social.",
+    imageUrl: ChantalEdie.src,
+    bio: "Chantal Edie Ntube est une photographe, écrivaine et curatrice camerounaise engagée pour l'art comme outil de changement social. Co-fondatrice de The Forest Creative Loft, elle travaille artistiquement avec son partenaire en photographie performative sur les enjeux socio-politiques. Fondatrice de 'African Woman in Photography', elle crée des plateformes de dialogue, de transformation et d'inclusion dans les industries créatives.",
+    sessions: [
+      {
+        id: "j2_s6",
+        title: "Table Ronde : Leadership féminin dans l'industrie créative",
+        href: "/programme/jour2#j2_s6"
+      }
+    ]  }
 ];
 
 export const SPEAKER_PROFILE_MAP = SPEAKER_PROFILES.reduce<Record<string, SpeakerProfile>>((map, speaker) => {

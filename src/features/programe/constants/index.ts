@@ -305,7 +305,7 @@ export const JOUR_3_SESSIONS: Session[] = [
   },
   {
     id: "j3_s3",
-    title: "F-Union Corner Investment by Women In Investment (WIN)",
+    title: "INVESTMENT CORNER POWERED BY WIN",
     hall: "Conference Hall 2",
     startTime: "10:30",
     endTime: "11:30",
