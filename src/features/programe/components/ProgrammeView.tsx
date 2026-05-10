@@ -7,15 +7,27 @@ import { SpeakerProfile } from "@/features/speakers/types";
 import { ProgrammeTabs } from "./ProgrammeTabs";
 import { SessionCard } from "./SessionCard";
 import { GoogleFormSection } from "./GoogleFormSection";
+import { DownloadProgrammeCenter } from "./DownloadProgrammeCenter";
 
 interface ProgrammeViewProps {
   sessions: Session[];
   googleFormUrl?: string;
   speakerProfiles?: SpeakerProfile[];
   onSpeakerClick?: (speaker: SpeakerProfile) => void;
+  pdfUrl?: string;
+  pdfFileName?: string;
+  showSpeakers?: boolean;
 }
 
-export const ProgrammeView = ({ sessions, googleFormUrl, speakerProfiles = [], onSpeakerClick }: ProgrammeViewProps) => {
+export const ProgrammeView = ({ 
+  sessions, 
+  googleFormUrl, 
+  speakerProfiles = [], 
+  onSpeakerClick,
+  pdfUrl,
+  pdfFileName = "Programme-F-UNION.pdf",
+  showSpeakers = true
+}: ProgrammeViewProps) => {
   const [activeHall, setActiveHall] = useState("Toutes les salles");
 
   const halls = useMemo(() => {
@@ -48,6 +60,7 @@ export const ProgrammeView = ({ sessions, googleFormUrl, speakerProfiles = [], o
                   session={session}
                   speakerProfiles={speakerProfiles}
                   onSpeakerClick={onSpeakerClick}
+                  showSpeakers={showSpeakers}
                 />
               ))
             ) : (
@@ -58,6 +71,8 @@ export const ProgrammeView = ({ sessions, googleFormUrl, speakerProfiles = [], o
           </div>
         </div>
       </Container>
+      
+      <DownloadProgrammeCenter pdfUrl={pdfUrl} pdfFileName={pdfFileName} />
       
       {googleFormUrl && <GoogleFormSection formUrl={googleFormUrl} />}
     </div>

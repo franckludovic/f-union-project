@@ -155,7 +155,7 @@ export const HeroSectionJour1 = () => {
             <button
               onClick={() =>
                 window.open(
-                  "https://f-union.genuka.shop/en/collections",
+                  "https://billeterie.f-union.org/",
                   "_blank"
                 )
               }

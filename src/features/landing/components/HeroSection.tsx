@@ -177,13 +177,13 @@ export const HeroSection = () => {
           </div>
 
           <div className="flex items-center justify-start md:justify-end">
-            <button
-              onClick={() => window.open("https://f-union.genuka.shop/en/collections", "_blank")}
-              style={{ backgroundColor: "#ffffff", color: "#21004E" }}
-              className="w-full sm:w-auto px-6 py-3 rounded-full font-bold text-xs shadow-md hover:bg-gray-100 transition-all active:scale-95 inline-flex items-center justify-center"
+            <Button
+              href="https://billeterie.f-union.org/"
+              variant="white"
+              className="w-full sm:w-auto px-6 py-3 text-xs shadow-md"
             >
               Réserver ma place
-            </button>
+            </Button>
           </div>
 
         </div>

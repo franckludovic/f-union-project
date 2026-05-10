@@ -8,7 +8,6 @@ import intervenant6 from "@/core/assets/intervenant6.png";
 import intervenant7 from "@/core/assets/intervenant7.png";
 import intervenant8 from "@/core/assets/intervenant8.png";
 import AurelieChazai from "@/core/assets/aurelie-chazai.png";
-import SantherMbacham from "@/core/assets/santher-mbacham.png";
 import ThierryNtamack from "@/core/assets/thierry-ntamack.jpg";
 import EditheNkenHOT from "@/core/assets/edithe-nken-hot.jpg";
 import GaelleNgue from "@/core/assets/me-gaelle-ngue.jpg";
@@ -22,6 +21,8 @@ import ChristianTchoupe from "@/core/assets/christian-tchoupe.png";
 import PechensDOUMBE from "@/core/assets/pechens-doumbe.jpg";
 import PriscaHeuya from "@/core/assets/prisca-heuya.png";
 import JocelyneNgassam from "@/core/assets/jocelyne-ngassam.jpg";
+import RoseDika from "@/core/assets/rose_dika.png";
+import WilfriedDjopa from "@core/assets/wilfried_djopa.jpg";
 
 export const JOUR_1_SESSIONS: Session[] = [
   {
@@ -186,7 +187,6 @@ export const JOUR_2_SESSIONS: Session[] = [
     endTime: "15:00",
     cible: "Next Gen",
     speakers: [
-      { id: "sp_j2_4_1", name: "Santher Mbacham", role: "Modératrice | Communication Lead Camerounaises in Tech", imageUrl: SantherMbacham.src },
       { id: "sp_j2_4_2", name: "Lydie Ngo Nogol", role: "Intervenante", imageUrl: intervenant3.src },
       { id: "sp_j2_4_3", name: "Carine Dîkambi", role: "Intervenante", imageUrl: intervenant4.src },
       { id: "sp_j2_4_4", name: "Belinda NGONO", role: "Regional Business Development West & Central Francophone Africa", imageUrl: intervenant5.src },
@@ -205,7 +205,8 @@ export const JOUR_2_SESSIONS: Session[] = [
       { id: "sp_j2_5_2", name: "CCA representative", role: "Finance & Fiscalité", imageUrl: intervenant8.src },
       { id: "sp_j2_5_3", name: "QHSE TBC", role: "Expert QHSE", imageUrl: intervenant1.src },
       { id: "sp_j2_5_4", name: "Diane Audrey Ngako", role: "Marketing et Pub", imageUrl: intervenant2.src },
-      { id: "sp_j2_5_5", name: "Genuka representative", role: "Digital Expert", imageUrl: intervenant3.src }
+      { id: "sp_j2_5_5", name: "Genuka representative", role: "Digital Expert", imageUrl: intervenant3.src },
+      { id: "sp_j2_5_6", name: "Wilfried Djopa", role: "Founder & CEO de Genuka", imageUrl: WilfriedDjopa.src },
     ]
   },
   {
@@ -245,10 +246,11 @@ export const JOUR_2_SESSIONS: Session[] = [
     endTime: "17:00",
     cible: "All",
     speakers: [
-      { id: "sp_j2_8_1", name: "Rose DIKA", role: "Modératrice", imageUrl: intervenant5.src },
+      { id: "sp_j2_8_1", name: "Rose Dika", role: "Modératrice", imageUrl: RoseDika.src },
       { id: "sp_j2_8_2", name: "Scensoria representative", role: "Intervenante", imageUrl: intervenant6.src },
       { id: "sp_j2_8_3", name: "Edithe Nken Hot", role: "Founder and CEO | Strategic Marketing", imageUrl: EditheNkenHOT.src },
-      { id: "sp_j2_8_4", name: "Gaelle Ngue", role: "Avocate Gérante", imageUrl: GaelleNgue.src }
+      { id: "sp_j2_8_4", name: "Gaelle Ngue", role: "Avocate Gérante", imageUrl: GaelleNgue.src },
+      { id: "sp_j2_8_5", name: "Rose Dika", role: "PMO F-Union Africa Summit 2", imageUrl: RoseDika.src },
     ]
   },
   {
@@ -295,7 +297,7 @@ export const JOUR_3_SESSIONS: Session[] = [
   {
     id: "j3_s2",
     title: "F-Union Talents Africa 2035 Challenge – Pitch your future. Build Africa",
-    hall: "Conference Hall 6",
+    hall: "conference Hall 3",
     startTime: "08:00",
     endTime: "11:30",
     cible: "Talent-Next Gen",
@@ -329,7 +331,7 @@ export const JOUR_3_SESSIONS: Session[] = [
   {
     id: "j3_s5",
     title: "Table Ronde : Ce que les entreprises attendent des jeunes talents aujourd’hui",
-    hall: "Conference Hall 6",
+    hall: "conference Hall 3",
     startTime: "14:00",
     endTime: "15:30",
     cible: "Talent-Next Gen",

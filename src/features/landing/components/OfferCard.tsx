@@ -21,7 +21,7 @@ export const OfferCard = ({ title, price, features, variant, imageUrl, onClick, 
       titleColor: "text-white",
       buttonBg: "bg-[#380400]",
       priceColor: "text-[#380400]",
-      onClick: () => window.open("https://f-union.genuka.shop/en/products/pass-next-gen", "_blank"),
+      onClick: () => window.open(" https://genuka.com/checkout/01km2n2kd3s3zaq5dbd4zb5kss/pass-next-gen", "_blank"),
       buttonText: "text-white",
       imageOverlay: "bg-gradient-to-t from-[#78201A] to-[#DE3B30]/60"
     },
@@ -30,7 +30,7 @@ export const OfferCard = ({ title, price, features, variant, imageUrl, onClick, 
       titleColor: "text-white",
       buttonBg: "bg-[#2E99DD]",
       priceColor: "text-[#BADBFF]",
-      onClick: () => window.open("https://f-union.genuka.shop/en/products/pass-talent", "_blank"),
+      onClick: () => window.open(" https://genuka.com/checkout/01km2n2kd3s3zaq5dbd4zb5kss/pass-talent", "_blank"),
       buttonText: "text-white",
       imageOverlay: "bg-[#024282]/85"
     },
@@ -39,7 +39,7 @@ export const OfferCard = ({ title, price, features, variant, imageUrl, onClick, 
       titleColor: "text-white",
       buttonBg: "bg-[#210250]", // Bright blue button
       priceColor: "text-[#21004E]",
-      onClick: () => window.open("https://f-union.genuka.shop/en/products/pass-vip", "_blank"),
+      onClick: () => window.open("https://genuka.com/checkout/01km2n2kd3s3zaq5dbd4zb5kss/pass-vip", "_blank"),
       buttonText: "text-white",
       imageOverlay: "bg-gradient-to-t from-[#360978] to-[#8B5DD0]/60"
     },
@@ -49,7 +49,6 @@ export const OfferCard = ({ title, price, features, variant, imageUrl, onClick, 
 
   return (
     <div className={`rounded-[2rem] overflow-hidden flex flex-col relative w-full h-full shadow-lg ${currentStyle.bg}`}>
-
 
       <div className="absolute inset-0 z-0">
         {imageUrl ? (

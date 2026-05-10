@@ -18,19 +18,19 @@ export const SpeakerModal = ({ speaker, onClose }: SpeakerModalProps) => {
         className="relative w-full max-w-4xl rounded-[2rem] bg-white shadow-2xl"
         onClick={(event) => event.stopPropagation()}
       >
-        <button
+        {/* <button
           type="button"
           onClick={onClose}
           className="absolute left-5 top-5 rounded-full bg-white/90 px-4 py-2 text-[#0F2E4C] shadow-md transition hover:bg-white"
           aria-label="Close speaker profile"
         >
           Quitter
-        </button>
+        </button> */}
 
         <button
           type="button"
           onClick={onClose}
-          className="absolute right-5 top-5 rounded-full bg-white/90 p-2 text-[#0F2E4C] shadow-md transition hover:bg-white"
+          className="absolute right-5 top-5 bg-[#a493be] rounded-full  p-2 text-[#0F2E4C] shadow-md transition hover:bg-[#845ec2]"
           aria-label="Close speaker profile"
         >
           &#10005;
@@ -44,7 +44,7 @@ export const SpeakerModal = ({ speaker, onClose }: SpeakerModalProps) => {
 
             <div className="space-y-6">
               <div>
-                <p className="text-sm uppercase tracking-[0.24em] text-[#845ec2]">Profil intervenant</p>
+                <p className="text-sm uppercase tracking-[0.24em] text-[#845ec2]">Profil</p>
                 <h2 className="mt-3 text-3xl font-black text-[#0F2E4C]">{speaker.name}</h2>
                 <p className="mt-2 text-sm text-[#4B5668]">{speaker.role}</p>
                 {speaker.company && <p className="text-sm text-[#6B7280]">{speaker.company}</p>}

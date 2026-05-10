@@ -54,9 +54,10 @@ interface SessionCardProps {
   session: Session;
   speakerProfiles?: SpeakerProfile[];
   onSpeakerClick?: (speaker: SpeakerProfile) => void;
+  showSpeakers?: boolean;
 }
 
-export const SessionCard = ({ session, speakerProfiles = [], onSpeakerClick }: SessionCardProps) => {
+export const SessionCard = ({ session, speakerProfiles = [], onSpeakerClick, showSpeakers = true }: SessionCardProps) => {
   return (
     <div id={session.id} className="py-10 md:py-16" style={{
       borderBottom: '1.5px solid #F0F0F0',
@@ -99,58 +100,60 @@ export const SessionCard = ({ session, speakerProfiles = [], onSpeakerClick }: S
         </div>
 
         {/* RIGHT: Speakers Section - Grid Layout */}
-        <div className="w-full md:w-auto flex flex-col pt-10 md:pt-0">
-          <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-x-0 gap-y-10 items-start">
-            {session.speakers.map((speaker) => {
-              const profile = SPEAKER_PROFILE_MAP[speaker.name.toLowerCase()] || speakerProfiles.find((item) => item.name.toLowerCase() === speaker.name.toLowerCase());
-              const clickAction = profile ? () => onSpeakerClick?.(profile) : undefined;
+        {showSpeakers && (
+          <div className="w-full md:w-auto flex flex-col pt-10 md:pt-0">
+            <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-x-0 gap-y-10 items-start">
+              {session.speakers.map((speaker) => {
+                const profile = SPEAKER_PROFILE_MAP[speaker.name.toLowerCase()] || speakerProfiles.find((item) => item.name.toLowerCase() === speaker.name.toLowerCase());
+                const clickAction = profile ? () => onSpeakerClick?.(profile) : undefined;
 
-              return (
-                <div
-                  key={speaker.id}
-                  className={`flex flex-col items-center text-center gap-3 min-w-[72px] ${profile ? 'cursor-pointer group' : 'opacity-70'}`}
-                  onClick={clickAction}
-                  role={profile ? 'button' : undefined}
-                  tabIndex={profile ? 0 : undefined}
-                  onKeyDown={profile ? (event) => {
-                    if (event.key === 'Enter' || event.key === ' ') {
-                      event.preventDefault();
-                      clickAction?.();
-                    }
-                  } : undefined}
-                >
+                return (
                   <div
-                    style={{
-                      width: '72px',
-                      height: '72px',
-                      borderRadius: '16px',
-                      overflow: 'hidden',
-                      flexShrink: 0,
-                      backgroundColor: '#F0F2F5',
-                      border: '1px solid #F0F2F5'
-                    }}
-                    className={`shadow-sm transition-shadow duration-300 ${profile ? 'group-hover:shadow-md' : ''}`}
+                    key={speaker.id}
+                    className={`flex flex-col items-center text-center gap-3 min-w-[72px] ${profile ? 'cursor-pointer group' : 'opacity-70'}`}
+                    onClick={clickAction}
+                    role={profile ? 'button' : undefined}
+                    tabIndex={profile ? 0 : undefined}
+                    onKeyDown={profile ? (event) => {
+                      if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        clickAction?.();
+                      }
+                    } : undefined}
                   >
-                    <img
-                      src={profile?.imageUrl || speaker.imageUrl || "https://via.placeholder.com/150"}
-                      alt={speaker.name}
-                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                      className={`transition-transform duration-500 ${profile ? 'group-hover:scale-110' : ''}`}
-                    />
+                    <div
+                      style={{
+                        width: '72px',
+                        height: '72px',
+                        borderRadius: '16px',
+                        overflow: 'hidden',
+                        flexShrink: 0,
+                        backgroundColor: '#F0F2F5',
+                        border: '1px solid #F0F2F5'
+                      }}
+                      className={`shadow-sm transition-shadow duration-300 ${profile ? 'group-hover:shadow-md' : ''}`}
+                    >
+                      <img
+                        src={profile?.imageUrl || speaker.imageUrl || "https://via.placeholder.com/150"}
+                        alt={speaker.name}
+                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                        className={`transition-transform duration-500 ${profile ? 'group-hover:scale-110' : ''}`}
+                      />
+                    </div>
+                    <div className="flex flex-col">
+                      <span style={{ fontWeight: 800, color: '#0F2E4C', fontSize: '13px', lineHeight: '1.2' }} className="md:text-sm">
+                        {speaker.name}
+                      </span>
+                      <span style={{ color: '#5E7184', fontSize: '11px', fontWeight: 500 }} className="md:text-xs">
+                        {speaker.gender || speaker.role}
+                      </span>
+                    </div>
                   </div>
-                  <div className="flex flex-col">
-                    <span style={{ fontWeight: 800, color: '#0F2E4C', fontSize: '13px', lineHeight: '1.2' }} className="md:text-sm">
-                      {speaker.name}
-                    </span>
-                    <span style={{ color: '#5E7184', fontSize: '11px', fontWeight: 500 }} className="md:text-xs">
-                      {speaker.gender || speaker.role}
-                    </span>
-                  </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
-        </div>
+        )}
 
       </div>
     </div>

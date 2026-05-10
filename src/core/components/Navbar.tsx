@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { Container } from './Container';
 import { Button } from './Button';
 import Link from 'next/link';
-import Funion_logo from '@/core/assets/Funion_logo.png'
+import Funion_logo from '@/core/assets/LOGO_SVG.svg'
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -68,7 +68,6 @@ export const Navbar = () => {
             </div>
 
             <Link href="/speakers" className={`${isScrolled ? "text-[#0d1f36]" : "text-white/90"} hover:text-gray-600 transition-colors uppercase tracking-wide`}>Intervenant(e)s</Link>
-            <Link href="#partenaires" className={`${isScrolled ? "text-[#0d1f36]" : "text-white/90"} hover:text-gray-600 transition-colors uppercase tracking-wide`}>Partenaires</Link>
             <Link href="#contact" className={`${isScrolled ? "text-[#0d1f36]" : "text-white/90"} hover:text-gray-600 transition-colors uppercase tracking-wide`}>Contact</Link>
             <Link href="/communique-presse" className={`${isScrolled ? "text-[#0d1f36]" : "text-white/90"} hover:text-gray-600 transition-colors uppercase tracking-wide`}>Press</Link>
           </div>
@@ -76,7 +75,7 @@ export const Navbar = () => {
           <div className="flex items-center gap-4">
             {/* Desktop Button*/}
             <div className="hidden lg:block">
-              <Button variant="navy" size="md" className="rounded-full text-xs font-bold px-6">
+              <Button variant="navy" size="md" href="https://billeterie.f-union.org/" className="rounded-full text-xs font-bold px-6">
                 Reserver ma place
               </Button>
             </div>
@@ -134,7 +133,6 @@ export const Navbar = () => {
                   subLinks: programmeLinks
                 },
                 { href: "/speakers", label: "Intervenant(e)s" },
-                { href: "#partenaires", label: "Partenaires" },
                 { href: "#contact", label: "Contact" },
                 { href: "/communique-presse", label: "Press" }
               ].map((link) => (
