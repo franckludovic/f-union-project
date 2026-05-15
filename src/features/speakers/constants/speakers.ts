@@ -59,11 +59,11 @@ export const SPEAKER_PROFILES: SpeakerProfile[] = [
   },
   {
     id: "hermine-dolores-boum",
-    name: "Hermine Dolores Boum",
+    name: "Hermines Dolores Boum",
     role: "Administratrice indépendante",
     description: "Administratrice indépendante et experte en gouvernance d'entreprise.",
     imageUrl: HermineDoloresBoum.src,
-    bio: "Hermine Dolores Boum est une administratrice indépendante reconnue pour son expertise en gouvernance d'entreprise et son engagement dans le développement économique.",
+    bio: "Hermines Dolores Boum est une administratrice indépendante reconnue pour son expertise en gouvernance d'entreprise et son engagement dans le développement économique.",
     sessions: [
       { id: "j2_s3", title: "Table Ronde : Leadership féminin", href: "/programme/jour2#j2_s3" }
     ]
@@ -86,11 +86,11 @@ export const SPEAKER_PROFILES: SpeakerProfile[] = [
 
   {
     id: "gaelle-ngue",
-    name: "Gaëlle Ngue",
+    name: "Gaelle Ngue",
     role: "Avocate associée",
     description: "Avocate spécialiste du droit des affaires, de la gouvernance et de la conformité réglementaire.",
     imageUrl: MeGaelleNGUE.src,
-    bio: "Gaëlle Ngue est avocate, membre du Barreau du Cameroun et du Barreau du Québec. Elle est l’associée gérante du cabinet Ngue & Associés, basé au Cameroun, dont la pratique est axée sur le droit des affaires, la gouvernance d’entreprise, le droit OHADA et la conformité réglementaire.",
+    bio: "Gaelle Ngue est avocate, membre du Barreau du Cameroun et du Barreau du Québec. Elle est l’associée gérante du cabinet Ngue & Associés, basé au Cameroun, dont la pratique est axée sur le droit des affaires, la gouvernance d’entreprise, le droit OHADA et la conformité réglementaire.",
     sessions: [
       {
         id: "j2_s8",
@@ -105,7 +105,7 @@ export const SPEAKER_PROFILES: SpeakerProfile[] = [
     role: "Intervenante",
     description: "Cybersecurity Expert, Director Information System & Digital Transformation.",
     imageUrl: LydieNgoNogol.src,
-    bio: "---",
+    bio: ".",
     sessions: [
       {
         id: "j2_s6",
@@ -120,7 +120,7 @@ export const SPEAKER_PROFILES: SpeakerProfile[] = [
     role: "Modératrice",
     description: "",
     imageUrl: AimeeCatherineMoukouri.src,
-    bio: "--.",
+    bio: ".",
     sessions: [
       {
         id: "j2_s6",
@@ -177,7 +177,7 @@ export const SPEAKER_PROFILES: SpeakerProfile[] = [
   },
   {
     id: "edith-nken-hot",
-    name: "Edithe Nken Hot",
+    name: "Edith Nken",
     role: "Consultante en stratégie commerciale",
     description: "Consultante spécialisée en croissance commerciale et développement humain des entreprises.",
     imageUrl: EdithNkenHOT.src,
@@ -435,7 +435,7 @@ export const SPEAKER_PROFILES: SpeakerProfile[] = [
   },
   {
     id: "chantal-edie-ntube",
-    name: "Chantal Edie Ntube",
+    name: "Chantal Edie",
     role: "Photographe, Écrivaine & Curatrice",
     description: "Artiste camerounaise engagée pour l'art comme outil de changement social.",
     imageUrl: ChantalEdie.src,
