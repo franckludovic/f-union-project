@@ -14,9 +14,8 @@ interface ProgrammeViewProps {
   googleFormUrl?: string;
   speakerProfiles?: SpeakerProfile[];
   onSpeakerClick?: (speaker: SpeakerProfile) => void;
-  pdfUrl?: string;
-  pdfFileName?: string;
   showSpeakers?: boolean;
+  dayIndex?: number;
 }
 
 export const ProgrammeView = ({ 
@@ -24,9 +23,8 @@ export const ProgrammeView = ({
   googleFormUrl, 
   speakerProfiles = [], 
   onSpeakerClick,
-  pdfUrl,
-  pdfFileName = "Programme-F-UNION.pdf",
-  showSpeakers = true
+  showSpeakers = true,
+  dayIndex
 }: ProgrammeViewProps) => {
   const [activeHall, setActiveHall] = useState("Toutes les salles");
 
@@ -72,7 +70,7 @@ export const ProgrammeView = ({
         </div>
       </Container>
       
-      {/* <DownloadProgrammeCenter pdfUrl={pdfUrl} pdfFileName={pdfFileName} /> */}
+      <DownloadProgrammeCenter dayIndex={dayIndex} />
       
       {googleFormUrl && <GoogleFormSection formUrl={googleFormUrl} />}
     </div>

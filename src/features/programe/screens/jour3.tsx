@@ -19,9 +19,8 @@ export const Jour3Screen = () => {
         googleFormUrl="https://docs.google.com/forms/d/e/1FAIpQLSdyaZmTc2lu4TO4dhqxQtycLUT4JaMHVvDWzmwfyKWWMst0AA/viewform?embedded=true"
         speakerProfiles={SPEAKER_PROFILES}
         onSpeakerClick={setActiveSpeaker}
-        pdfUrl="/pdfs/programme-jour3.pdf"
-        pdfFileName="Programme-F-UNION-Jour-3.pdf"
         showSpeakers={false}
+        dayIndex={2}
       />
       <SpeakerModal speaker={activeSpeaker} onClose={() => setActiveSpeaker(null)} />
     </>

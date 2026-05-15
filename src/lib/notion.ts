@@ -8,6 +8,7 @@ export const notion = new Client({
 });
 
 export const NOTION_PAGE_ID = process.env.NOTION_PAGE_ID;
+export const NOTION_PROGRAMME_PAGE_ID = process.env.NOTION_PAGE_ID2;
 
 export interface CommuniqueContent {
   header: string;
@@ -94,6 +95,35 @@ export async function getNotionPdfUrls(): Promise<{ url: string; name: string }[
     return pdfs;
   } catch (error) {
     console.error("Error fetching PDFs from Notion:", error);
+    return [];
+  }
+}
+
+export async function getProgrammePdfUrls(): Promise<{ url: string; name: string }[]> {
+  if (!NOTION_PROGRAMME_PAGE_ID) return [];
+
+  try {
+    const response = await notion.blocks.children.list({
+      block_id: NOTION_PROGRAMME_PAGE_ID,
+    });
+
+    const blocks = response.results as BlockObjectResponse[];
+    const pdfs: { url: string; name: string }[] = [];
+
+    for (const block of blocks) {
+      if (block.type === 'file') {
+        const url = block.file.type === 'file' ? block.file.file.url : block.file.external.url;
+        const name = block.file.name || `programme-jour-${pdfs.length + 1}.pdf`;
+        if (url) pdfs.push({ url, name });
+      } else if (block.type === 'pdf') {
+        const url = block.pdf.type === 'file' ? block.pdf.file.url : block.pdf.external.url;
+        const name = `programme-jour-${pdfs.length + 1}.pdf`;
+        if (url) pdfs.push({ url, name });
+      }
+    }
+    return pdfs;
+  } catch (error) {
+    console.error("Error fetching Programme PDFs from Notion:", error);
     return [];
   }
 }
