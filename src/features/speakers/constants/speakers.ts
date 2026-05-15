@@ -27,6 +27,7 @@ import ChantalEdie from "@/core/assets/Chantal-Edie.jpeg";
 import CarineDIkambi from "@/core/assets/Carine-DIkambi.jpg";
 import LydieNgoNogol from "@/core/assets/Lydie-Ngo-Nogol.jpg";
 import AimeeCatherineMoukouri from "@/core/assets/Aimée-Catherine-Moukouri.jpg";
+import HermineDoloresBoum from "@/core/assets/intervenant6.png";
 
 export const SPEAKER_PROFILES: SpeakerProfile[] = [
   {
@@ -41,6 +42,121 @@ export const SPEAKER_PROFILES: SpeakerProfile[] = [
         id: "j2_s5",
         title: "Workshop : Scale Up Room",
         href: "/programme/jour2#j2_s5"
+      }
+    ]
+  },
+  {
+    id: "jocelyne-ngassam",
+    name: "Jocelyne Ngassam",
+    role: "Management & Commercial Expert",
+    description: "Experte en management et stratégie commerciale, dédiée à l'accompagnement des talents.",
+    imageUrl: JocelyneNgassam.src,
+    bio: "Jocelyne Ngassam est une experte en management et en stratégie commerciale avec une vaste expérience dans l'accompagnement des entreprises et des talents en Afrique.",
+    sessions: [
+      { id: "j3_s1", title: "1:1 MENTORAT", href: "/programme/jour3#j3_s1" },
+      { id: "j3_s9", title: "AFTER DARK CLOTURE : FLASH TALK", href: "/programme/jour3#j3_s9" }
+    ]
+  },
+  {
+    id: "hermine-dolores-boum",
+    name: "Hermine Dolores Boum",
+    role: "Administratrice indépendante",
+    description: "Administratrice indépendante et experte en gouvernance d'entreprise.",
+    imageUrl: HermineDoloresBoum.src,
+    bio: "Hermine Dolores Boum est une administratrice indépendante reconnue pour son expertise en gouvernance d'entreprise et son engagement dans le développement économique.",
+    sessions: [
+      { id: "j2_s3", title: "Table Ronde : Leadership féminin", href: "/programme/jour2#j2_s3" }
+    ]
+  },
+  {
+    id: "linda-nganko",
+    name: "Linda Loretta Nganko",
+    role: "Experte RH",
+    description: "Experte RH reconnue, fondatrice de 2LN Expertise et promotrice du leadership humain.",
+    imageUrl: LindaNganko.src,
+    bio: "Linda est une experte RH reconnue à l'échelle africaine, avec plus de 20 ans d'expérience RH, notamment au sein de MTN Cameroon et du Groupe Activa. Elle a fondé 2LN Expertise, un laboratoire RH proposant des outils et conseils pour les experts RH.",
+    sessions: [
+      {
+        id: "j3_s4",
+        title: "Réinventer sa carrière",
+        href: "/programme/jour3#j3_s4"
+      }
+    ]
+  },
+
+  {
+    id: "gaelle-ngue",
+    name: "Gaëlle Ngue",
+    role: "Avocate associée",
+    description: "Avocate spécialiste du droit des affaires, de la gouvernance et de la conformité réglementaire.",
+    imageUrl: MeGaelleNGUE.src,
+    bio: "Gaëlle Ngue est avocate, membre du Barreau du Cameroun et du Barreau du Québec. Elle est l’associée gérante du cabinet Ngue & Associés, basé au Cameroun, dont la pratique est axée sur le droit des affaires, la gouvernance d’entreprise, le droit OHADA et la conformité réglementaire.",
+    sessions: [
+      {
+        id: "j2_s8",
+        title: "ATELIER VIP : Leadership Styling",
+        href: "/programme/jour2#j2_s8"
+      }
+    ]
+  },
+  {
+    id: "lydie-ngo-nogol",
+    name: "Lydie Ngo Nogol",
+    role: "Intervenante",
+    description: "Cybersecurity Expert, Director Information System & Digital Transformation.",
+    imageUrl: LydieNgoNogol.src,
+    bio: "---",
+    sessions: [
+      {
+        id: "j2_s6",
+        title: "Table Ronde : Leadership féminin dans l'industrie créative",
+        href: "/programme/jour2#j2_s6"
+      }
+    ]  
+  },
+  {
+    id: "aimee-catherine-moukouri",
+    name: "Aimée Catherine Moukouri",
+    role: "Modératrice",
+    description: "",
+    imageUrl: AimeeCatherineMoukouri.src,
+    bio: "--.",
+    sessions: [
+      {
+        id: "j2_s6",
+        title: "Table Ronde : Leadership féminin dans l'industrie créative",
+        href: "/programme/jour2#j2_s6"
+      }
+    ]  
+  },
+  {
+    id: "diane-audrey-ngako",
+    name: "Diane Audrey Ngako",
+    role: "Experte Marketing & Entrepreneuriat",
+    description: "Entrepreneur et experte en stratégies commerciales et marketing.",
+    imageUrl: DianeAudreyNgako.src,
+    bio: "",
+    sessions: [
+      {
+        id: "j2_s5",
+        title: "Workshop : Scale Up Room – 5 entrepreneurs, 5 défis stratégiques, face à un panel d'experts",
+        href: "/programme/jour2#j2_s5"
+      }
+    ]
+  },
+  {
+    id: "eva-youmbi",
+    name: "Eva Youmbi",
+    role: "Directrice des Marchés de Capitaux",
+    company: "FedhEn Capital",
+    description: "Experte en finances, marchés de capitaux et inclusion financière en Afrique.",
+    imageUrl: EvaYoumbi.src,
+    bio: "Eva Youmbi est Directrice des marchés de capitaux chez FedhEn Capital, où elle accompagne des États et des entreprises stratégiques dans leurs opérations de financement. Diplômée de ESCP Business School et certifiée en inclusion financière par le FMI, elle s'intéresse au développement des marchés financiers africains et à l'accès au financement pour les PME et les jeunes entrepreneurs.",
+    sessions: [
+      {
+        id: "j2_s10",
+        title: "Investment Corner Powered by WIN",
+        href: "/programme/jour2#j2_s10"
       }
     ]
   },
@@ -75,21 +191,6 @@ export const SPEAKER_PROFILES: SpeakerProfile[] = [
     ]
   },
   {
-    id: "gaelle-ngue",
-    name: "Gaëlle Ngue",
-    role: "Avocate associée",
-    description: "Avocate spécialiste du droit des affaires, de la gouvernance et de la conformité réglementaire.",
-    imageUrl: MeGaelleNGUE.src,
-    bio: "Gaëlle Ngue est avocate, membre du Barreau du Cameroun et du Barreau du Québec. Elle est l’associée gérante du cabinet Ngue & Associés, basé au Cameroun, dont la pratique est axée sur le droit des affaires, la gouvernance d’entreprise, le droit OHADA et la conformité réglementaire.",
-    sessions: [
-      {
-        id: "j2_s8",
-        title: "ATELIER VIP : Leadership Styling",
-        href: "/programme/jour2#j2_s8"
-      }
-    ]
-  },
-  {
     id: "rose-dika",
     name: "Rose Dika",
     role: "PMO F-Union Africa Summit 2",
@@ -101,21 +202,6 @@ export const SPEAKER_PROFILES: SpeakerProfile[] = [
         id: "j2_s8",
         title: "ATELIER VIP : Leadership Styling",
         href: "/programme/jour2#j2_s8"
-      }
-    ]
-  },
-  {
-    id: "linda-nganko",
-    name: "Linda Loretta Nganko",
-    role: "Experte RH",
-    description: "Experte RH reconnue, fondatrice de 2LN Expertise et promotrice du leadership humain.",
-    imageUrl: LindaNganko.src,
-    bio: "Linda est une experte RH reconnue à l'échelle africaine, avec plus de 20 ans d'expérience RH, notamment au sein de MTN Cameroon et du Groupe Activa. Elle a fondé 2LN Expertise, un laboratoire RH proposant des outils et conseils pour les experts RH.",
-    sessions: [
-      {
-        id: "j3_s4",
-        title: "Réinventer sa carrière",
-        href: "/programme/jour3#j3_s4"
       }
     ]
   },
@@ -149,7 +235,6 @@ export const SPEAKER_PROFILES: SpeakerProfile[] = [
       }
     ]
   },
-  
   {
     id: "anabelle-koung",
     name: "Anabelle KOUNG",
@@ -184,7 +269,7 @@ export const SPEAKER_PROFILES: SpeakerProfile[] = [
     id: "honore-nkouel",
     name: "Honoré Nkouel",
     role: "Directeur RH Central Africa",
-    description: "Expert RH et leader de la transformation des ressources humaines en Afrique centrale.",
+    description: "Expert RH and leader de la transformation des ressources humaines en Afrique centrale.",
     imageUrl: HonoreNkouel.src,
     bio: "Honoré NKOUEL est Expert RH et Directeur des Ressources Humaines pour l’Afrique centrale chez CFAO INFRASTRUCTURE. Fort de plus de 16 ans d’expérience, il incarne une nouvelle génération de DRH pragmatique et visionnaire.",
     sessions: [
@@ -318,37 +403,6 @@ export const SPEAKER_PROFILES: SpeakerProfile[] = [
     ]
   },
   {
-    id: "eva-youmbi",
-    name: "Eva Youmbi",
-    role: "Directrice des Marchés de Capitaux",
-    company: "FedhEn Capital",
-    description: "Experte en finances, marchés de capitaux et inclusion financière en Afrique.",
-    imageUrl: EvaYoumbi.src,
-    bio: "Eva Youmbi est Directrice des marchés de capitaux chez FedhEn Capital, où elle accompagne des États et des entreprises stratégiques dans leurs opérations de financement. Diplômée de ESCP Business School et certifiée en inclusion financière par le FMI, elle s'intéresse au développement des marchés financiers africains et à l'accès au financement pour les PME et les jeunes entrepreneurs.",
-    sessions: [
-      {
-        id: "j2_s10",
-        title: "Investment Corner Powered by WIN",
-        href: "/programme/jour2#j2_s10"
-      }
-    ]
-  },
-  {
-    id: "diane-audrey-ngako",
-    name: "Diane Audrey Ngako",
-    role: "Experte Marketing & Entrepreneuriat",
-    description: "Entrepreneur et experte en stratégies commerciales et marketing.",
-    imageUrl: DianeAudreyNgako.src,
-    bio: "",
-    sessions: [
-      {
-        id: "j2_s5",
-        title: "Workshop : Scale Up Room – 5 entrepreneurs, 5 défis stratégiques, face à un panel d'experts",
-        href: "/programme/jour2#j2_s5"
-      }
-    ]
-  },
-  {
     id: "paola-yoko",
     name: "Paola Yoko",
     role: "Productrice, Manageuse & Entrepreneure",
@@ -385,7 +439,7 @@ export const SPEAKER_PROFILES: SpeakerProfile[] = [
     role: "Photographe, Écrivaine & Curatrice",
     description: "Artiste camerounaise engagée pour l'art comme outil de changement social.",
     imageUrl: ChantalEdie.src,
-    bio: "Chantal Edie Ntube est une photographe, écrivaine et curatrice camerounaise engagée pour l'art comme outil de changement social. Co-fondatrice de The Forest Creative Loft, elle travaille artistiquement avec son partenaire en photographie performative sur les enjeux socio-politiques. Fondatrice de 'African Woman in Photography', elle crée des plateformes de dialogue, de transformation et d'inclusion dans les industries créatives.",
+    bio: "Chantal Edie Ntube est une photographe, écrivaine et curatrice camerounaise engagée pour l'art comme outil de changement social. Co-fondatrice de The Forest Creative Loft, elle travaille artistiquement with son partenaire en photographie performative sur les enjeux socio-politiques. Fondatrice de 'African Woman in Photography', elle crée des plateformes de dialogue, de transformation et d'inclusion dans les industries créatives.",
     sessions: [
       {
         id: "j2_s6",
@@ -401,36 +455,6 @@ export const SPEAKER_PROFILES: SpeakerProfile[] = [
     description: "Managing Director, Crypto & Web3 Entrepreneur",
     imageUrl: CarineDIkambi.src,
     bio: "---.",
-    sessions: [
-      {
-        id: "j2_s6",
-        title: "Table Ronde : Leadership féminin dans l'industrie créative",
-        href: "/programme/jour2#j2_s6"
-      }
-    ]  
-  },
-  {
-    id: "lydie-ngo-nogol",
-    name: "Lydie Ngo Nogol",
-    role: "Intervenante",
-    description: "Cybersecurity Expert, Director Information System & Digital Transformation.",
-    imageUrl: LydieNgoNogol.src,
-    bio: "---",
-    sessions: [
-      {
-        id: "j2_s6",
-        title: "Table Ronde : Leadership féminin dans l'industrie créative",
-        href: "/programme/jour2#j2_s6"
-      }
-    ]  
-  },
-  {
-    id: "aimee-catherine-moukouri",
-    name: "Aimée Catherine Moukouri",
-    role: "Modératrice",
-    description: "",
-    imageUrl: AimeeCatherineMoukouri.src,
-    bio: "--.",
     sessions: [
       {
         id: "j2_s6",
