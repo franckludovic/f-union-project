@@ -80,8 +80,9 @@ export const HeroSection = () => {
             <span className="text-[#b39ddb] font-bold">féminin.</span>
           </p>
 
+          {/*
           <div className="flex items-center justify-start gap-4 md:gap-8 lg:gap-12">
-            {/* Days */}
+              
             <div className="flex items-center flex-col gap-1">
               <div className="flex items-center justify-center shrink-0">
                 <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold">
@@ -95,7 +96,7 @@ export const HeroSection = () => {
 
             <div className="text-3xl md:text-4xl lg:text-5xl font-light">:</div>
 
-            {/* Hours */}
+              
             <div className="flex items-center flex-col gap-1">
               <div className="flex items-center justify-center shrink-0">
                 <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold">
@@ -109,7 +110,7 @@ export const HeroSection = () => {
 
             <div className="text-3xl md:text-4xl lg:text-5xl font-light">:</div>
 
-            {/* Minutes */}
+              
             <div className="flex items-center flex-col gap-1">
               <div className="flex items-center justify-center shrink-0">
                 <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold">
@@ -123,7 +124,7 @@ export const HeroSection = () => {
 
             <div className="text-3xl md:text-4xl lg:text-5xl font-light">:</div>
 
-            {/* Seconds */}
+              
             <div className="flex items-center flex-col gap-1">
               <div className="flex items-center justify-center shrink-0">
                 <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold">
@@ -135,6 +136,7 @@ export const HeroSection = () => {
               </div>
             </div>
           </div>
+          */}
 
         </div>
       </Container>

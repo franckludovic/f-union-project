@@ -6,7 +6,7 @@ import offer1 from "@/core/assets/offer1.jpeg";
 import day2 from "@/core/assets/day2.jpeg";
 import offer3 from "@/core/assets/offer3.jpeg";
 import day1 from "@/core/assets/day1.jpeg";
-import participate1img from "@/core/assets/participateimg1.jpeg"
+import participate1img from "@/core/assets/participateimg1.png"
 import participate2img from "@/core/assets/participateimg2.jpeg"
 import participate3img from "@/core/assets/participateimg3.jpeg"
 import participate4img from "@/core/assets/participateimg4.jpeg"

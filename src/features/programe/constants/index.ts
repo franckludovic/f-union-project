@@ -188,7 +188,7 @@ export const JOUR_2_SESSIONS: Session[] = [
     hall: "Conference Hall 1",
     startTime: "14:00",
     endTime: "15:00",
-    cible: "Next Gen",
+    cible: "Pass Next Gen",
     speakers: [
       { id: "sp_j2_4_2", name: "Lydie Ngo Nogol", role: "Intervenante", imageUrl: LydieNgoNogol.src },
       { id: "sp_j2_4_3", name: "Carine Dikambi", role: "Intervenante", imageUrl: CarineDIkambi.src },
@@ -205,7 +205,7 @@ export const JOUR_2_SESSIONS: Session[] = [
     hall: "Conference Hall 1",
     startTime: "14:00",
     endTime: "15:00",
-    cible: "Startups",
+    cible: "Pass Talent",
     speakers: [
       { id: "sp_j2_5_1", name: "Aurélie Chazai", role: "Expert Droit", imageUrl: AurelieChazai.src },
       { id: "sp_j2_5_2", name: "CCA representative", role: "Finance & Fiscalité", imageUrl: intervenant8.src },
@@ -242,7 +242,7 @@ export const JOUR_2_SESSIONS: Session[] = [
     hall: "Conference Hall 2",
     startTime: "15:00",
     endTime: "16:30",
-    cible: "VIP",
+    cible: "Pass VIP",
     speakers: [
       { id: "sp_j2_7_1", name: "Thierry Ntamack", role: "Acteur, réalisateur & coach prise de parole", imageUrl: ThierryNtamack.src }
     ]
@@ -268,7 +268,7 @@ export const JOUR_2_SESSIONS: Session[] = [
     hall: "Conference Hall 2",
     startTime: "17:00",
     endTime: "18:00",
-    cible: "VIP",
+    cible: "Pass VIP",
     speakers: [
       { id: "sp_j2_9_1", name: "Vanesse KAME", role: "Modératrice", imageUrl: intervenant1.src },
       { id: "sp_j2_9_2", name: "Esther Tiako", role: "Ex-DG et PCA CCA BANK", imageUrl: intervenant2.src },
@@ -281,7 +281,7 @@ export const JOUR_2_SESSIONS: Session[] = [
     hall: "Terrasse",
     startTime: "18:00",
     endTime: "20:00",
-    cible: "VIP",
+    cible: "Pass VIP",
     speakers: []
   }
 ];
@@ -318,7 +318,7 @@ export const JOUR_3_SESSIONS: Session[] = [
     hall: "Conference Hall 2",
     startTime: "10:30",
     endTime: "11:30",
-    cible: "Startup",
+    cible: "Pass Talent",
     speakers: [
       { id: "sp_j3_3_1", name: "TBC", role: "Modératrice / Intervenante", imageUrl: intervenant7.src }
     ]
@@ -358,7 +358,7 @@ export const JOUR_3_SESSIONS: Session[] = [
     hall: "Conference Hall 2",
     startTime: "14:00",
     endTime: "15:30",
-    cible: "VIP",
+    cible: "Pass VIP",
     speakers: []
   },
   {
@@ -367,7 +367,7 @@ export const JOUR_3_SESSIONS: Session[] = [
     hall: "Conference Hall 2",
     startTime: "15:30",
     endTime: "16:30",
-    cible: "VIP",
+    cible: "Pass VIP",
     speakers: [
       { id: "sp_j3_7_1", name: "TBC", role: "Modératrice", imageUrl: intervenant1.src },
       { id: "sp_j3_7_2", name: "Marie Andre bembong sohaing", role: "IFC Investment Project Lead", imageUrl: intervenant2.src },
