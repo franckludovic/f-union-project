@@ -1,3 +1,5 @@
+"use client";
+
 import { Session, Speaker } from "../types";
 import { SpeakerProfile } from "@/features/speakers/types";
 import { SPEAKER_PROFILE_MAP } from "@/features/speakers/constants/speakers";

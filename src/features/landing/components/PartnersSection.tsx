@@ -1,3 +1,5 @@
+"use client";
+
 import { Container } from "@/core/components/Container";
 import dotMap from "@/core/assets/Dot Map.png";
 import adekeLogo from "@/core/assets/ADEKE group.jpeg";
