@@ -47,9 +47,7 @@ export const Footer = () => {
                 <div className="leading-relaxed">
                   <div>Douala, Cameroun</div>
                   <div className="text-gray-400">
-                    Starland (sur invitation)- Élite Offices
-                    <br />
-                    Douala, Cameroun
+                    Starland (sur invitation) - Élite Offices
                   </div>
                 </div>
               </li>
