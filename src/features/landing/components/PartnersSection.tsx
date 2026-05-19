@@ -29,7 +29,7 @@ const categories = [
     logos: [adekeLogo.src, genukaLogo.src, mandaLogo.src, kenyaLogo.src, gozemLogo.src, studelyLogo.src],
   },
   {
-    title: "Partenaires Associations",
+    title: "Partenaires Associatifs",
     logos: [winLogo.src, citLogo.src, feminineLogo.src],
   },
   {
